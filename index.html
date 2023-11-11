@@ -85,17 +85,15 @@
 								<div class="image rounded"><img src="images/giants.png" alt="" style="width:100%; height:100%"></div>
 								<div class="content">
 									<header>
-										<h4>Detecting Planets Around Evolved Stars with <i>TESS</i></h4>
-										<p>Advised by Prof. Dan Huber and Dr. Sam Grunblatt</p>
+										<h4> <i>TESS</i></h4>
+										<p>Advised by Dimitri Mawet, Heather Knutson, Jason Wang, and Jean-Baptiste Ruffio</p>
 									</header>
-									<p>The explosion of exoplanet detection in the last decade has enabled astronomers to study the underlying characteristics of planet populations. Planets orbiting main-sequence stars have been characterized in detail, however planets orbiting evolved stars remain mysterious due to the small sample of observed transiting planets around post-main-sequence stars.</p>
-									<p>I am conducting a search for planets around evolved stars in the <i>TESS</i> Full Frame Images (FFIs). I wrote a pipeline to quickly remove the scattered light from <i>TESS</i> which uses linear regression to isolate and remove the bright background from light curves. After de-trending the light curve, my pipeline performs a Box Least Squares (BLS) search for transiting planet signals. We selected a sample of subgiant and red giant stars, and have generated and searched over 1,000,000 light curves. Our survey has identified and confirmed <b>fourteen new planets</b> which were not identified by the NASA SPOC or MIT QLP pipelines, and has led to <b>four publications</b> (see below) with multiple upcoming papers in prep.</p>
+									<p>I study KPIC spectra (R~35,000) of directly imaged giant planets and brown dwarfs companions to measure their atmospheric compositions, rotation rates, and radial velocities.
+										In the first paper on brown dwarf HD 4747 B, I demonstrated that high-resolution spectra yielded consistent results independent of assumptions on clouds, while low-resolution data of the same object fail to robustly constrain its abundances.</p>
+									<p>I am currently working on a sample of eight young, planetary-mass companions to uniformly measure their abundances and constrain their formation pathway.</p>
 									<ul class="actions">
-										<li><a href="https://github.com/nksaunders/giants" class="button small">The Code</a></li>
-										<li><a href="https://iopscience.iop.org/article/10.3847/1538-3881/ac38a1" class="button small">Paper 1</a></li>
-										<li><a href="https://iopscience.iop.org/article/10.3847/1538-3881/ac4972" class="button small">Paper 2</a></li>
-										<li><a href="https://iopscience.iop.org/article/10.3847/1538-3881/aca670" class="button small">Paper 3</a></li>
-										<li><a href="https://arxiv.org/pdf/2303.06728.pdf" class="button small">Paper 4</a></li>
+										<li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...937...54X/abstract" class="button small">Paper I</a></li>
+										<li><a href="https://ui.adsabs.harvard.edu/abs/2021JATIS...7c5006D/abstract" class="button small">KPIC Instrument Paper</a></li>
 									</ul>
 								</div>
 							</div>
@@ -103,31 +101,39 @@
 								<div class="image rounded"><img src="images/wmb.png" alt="" style="width:100%; height:100%"></div>
 								<div class="content">
 									<header>
-										<h4>Constraining Weakened Magnetic Braking with Asteroseismic Rotation Rates</h4>
-										<p>Advised by Prof. Jen van Saders</p>
+										<h4>Direct measurements of planetary orbital mutual inclinations</h4>
+										<p>Advised by Mark Wyatt</p>
 									</header>
-									<p>As stars age, they gradually lose angular momentum through stellar winds, and the rate at which they rotates decreases. Gyrochronology relates the rotation period of a star to its age. The spin-age relationship has been well characterized for young stars using nearby clusers, but remains unreliable for older stars. A population of old stars with faster than expected rotation prompted the theory of "Weakened Magnetic Braking," a stage of stellar evolution during which the star undergoes a magnetic transition that allows it to maintain rapid rotation.</p>
-									<p>With a new sample of benchmark stars with rotation periods measured from asteroseismology, I am creating stellar evolution models to constrain gyrochronology weakened magnetic braking models.</p>
+									<p>I'm also interested in combining different methods (imaging, radial velocity, astrometry) 
+												to constrain 3D orbital architectures and masses of exoplanets.
+												I started this work during my MPhil at Cambridge.</p>
+									<p>Our results on π Men and HAT-P-11 in <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.2096X/abstract">Xuan & Wyatt 2020</a>,
+									and results on the two debris disk systems in <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.499.5059X/abstract">Xuan et al. 2020b.</p>
+									<ul class="actions">
+										<li><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.2096X/abstract" class="button small">Paper I</a></li>
+										<li><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.499.5059X/abstract" class="button small">Paper II</a></li>
+									</ul>
 								</div>
 							</div>
 							<div class="feature">
 								<div class="image rounded"><img src="images/motion.gif" alt="" style="width:100%; height:100%"></div>
 								<div class="content">
 									<header>
-										<h4>Creating High-precision <i>K2</i> Light Curves</h4>
+										<h4>Characterizing the Keck/NIRC2 vortex coronagraph (2017-2018)</h4>
 										<p>Advised by Prof. Rory Barnes and Dr. Rodrigo Luger</p>
 									</header>
-									<p>When the <i>Kepler</i> space telescope lost two of its four reaction wheels, the spacecraft lost the fine pointing necessary for high precision photometry. Engineers were able to reorient the telescope to observe along the ecliptic plane, held stable by the photon pressure from the solar wind, and the mission entered a second phase called <i>K2</i>. However, the spacecraft maintained a slow drift and was re-oriented every 6 hours by a stabilizing thruster fire, causing targets to traverse accross the CCD detector. Because of subtle variations in sensitivity between pixels, as well as within each pixel, <i>K2</i> light curves have periodic systematic noise.</p>
-									<p>In order to better understand the characteristics of <i>K2</i> noise and test noise removal methods, I developed a Python package called <a style="font-family:monospace; color:#3296d9;" href="https://nksaunders.space/scope/">scope</a> (Simulated CCD Observations for Photometric Experimentation) to simulate the pixel sensitivty variation of the <i>Kepler</i> detector and motion of targets, ultimately reproducing the noise properties of <i>K2</i> light curves. <a style="font-family:monospace; color:#3296d9;" href="https://nksaunders.space/scope/">Scope</a> was used to test the performance of the <a style="font-family:monospace; color:#3296d9;" href="https://luger.dev/everest/index.html">everest</a> pipeline, particularly in the case of high motion. The results of the paper linked below influenced the decision to continue observation and upload larger aperture masks for <i>K2</i> campaign 17.</p>
+									<p>In the summer of 2017, I wrote software to automate the data processing workflow
+												for the Keck/NIRC2 vortex coronagraph, and helped set up a Mongo database and a Flask website 
+												to organize and display the data products. These tools are still in use by the group.</p>
+									<p>With the pipeline, I re-reduced archival data of more than 300 stars, and wrote a paper (Xuan et al. 2018)
+										on characterizing the instrument's performance.</p>
 									<ul class="actions">
-										<li><a href="https://github.com/nksaunders/scope" class="button small">The Code</a></li>
-										<li><a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab12e4" class="button small">The Paper</a></li>
-										<li><a href="files/scope_example.html" class="button small">Examples</a></li>
+										<li><a href="https://ui.adsabs.harvard.edu/abs/2018AJ....156..156X/abstract" class="button small">The Paper</a></li>
 									</ul>
 								</div>
 							</div>
 							<div style="max-width:800px; display:block; margin: 0 auto;">
-								<p><b>Publications:</b><br>
+								<p><b>Selected Publications:</b><br>
 								Hedges, C., Angus, R., Barentsen, G., <b>Saunders, N.</b>, Montet, B.T., Gully-Santiago, M. (2020) <a href="https://iopscience.iop.org/article/10.3847/2515-5172/abd106" style="color:#3296d9;">Systematics-insensitive Periodogram for Finding Periods in TESS Observations of Long-period Rotators.</a> RNAAS, 4, 220</p>
 								<p><b>Saunders, N.</b>, Luger, R., Barnes, R. (2019) <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ab12e4" style="color:#3296d9;">The Pointing Limits of Transiting Exoplanet Light Curve Characterization with Pixel Level De-correlation</a>. AJ, 157, 197</p>
 								<p>Hedges, C., <b>Saunders, N.</b>, Barentsen, G., Coughlin, J., Vinícius de Miranda Cardoso, J., Kostov, V., Dotson, J., Cody, A.M. (2019) <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ab2a74/pdf" style="color:#3296d9;">Four Small Planets Buried in K2 Systems: What Can We Learn for TESS?</a> ApJL, 880, 1</p>
@@ -155,20 +161,30 @@
 						</div>
 					</section>
 
-				</section><!-- Four --><section id="four" class="wrapper style3 special"><div class="container">
-						<header class="major"><h2>Aenean elementum ligula</h2>
-							<p>Feugiat sed lorem ipsum magna</p>
-						</header><ul class="actions"><li><a href="#" class="button special big">Get in touch</a></li>
-						</ul></div>
-				</section><!-- Footer --><footer id="footer"><div class="container">
-					<ul class="icons"><li><a href="#" class="icon fa-facebook"></a></li>
-						<li><a href="#" class="icon fa-twitter"></a></li>
-						<li><a href="#" class="icon fa-instagram"></a></li>
-					</ul></div>
-			</footer><div class="copyright">
-			Site made with: <a href="https://templated.co/">Templated</a>
-		</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="copyright" style="font-size:10pt">
+						<li>© Jerry Xuan 2023</li>
+						<li>Design adapted from <a style="font-family:monospace; color:#3296d9;" href="http://templated.co">templated</a></li>
+						<li>Background gif by <a href="http://www.spitzer.caltech.edu/mission/profile/82-Tim-Pyle">T. Pyle (NASA JPL)</a></li>
+					</ul>
+				</div>
+			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
+	
+
+<a href="#navPanel" class="navPanelToggle"></a><div id="navPanel" class="">
+					<ul>
+						<li><a href="#research" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Research</a></li>
+						<li><a href="#codes" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Software</a></li>
+						<li><a href="#outreach" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Outreach</a></li>
+					</ul>
+				<a href="#navPanel" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></div></body></html>
