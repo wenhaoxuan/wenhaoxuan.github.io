@@ -1993,11 +1993,11 @@
 			display: inline-block;
 			float: left;
 			margin-bottom: 3em;
-			width: 50%;
+			width: 100%;
 		}
 
 			.feature-grid .feature .content {
-				width: 60%;
+				width: 100%;
 			}
 
 			.feature-grid .feature .image {
@@ -2037,7 +2037,7 @@
 			}
 
 				.feature-grid .feature .content {
-					width: 65%;
+					width: 100%;
 				}
 
 				.feature-grid .feature .image {
