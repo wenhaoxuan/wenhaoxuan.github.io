@@ -1997,11 +1997,11 @@
 		}
 
 			.feature-grid .feature .content {
-				width: 90%;
+				width: 100%;
 			}
 
 			.feature-grid .feature .image {
-				width: 10%;
+				width: 30%;
 			}
 
 				.feature-grid .feature .image img {
@@ -2010,18 +2010,18 @@
 				}
 
 		.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
-				float: right;
-				margin-right: 5%;
-				text-align: right;
+				float: left;
+				margin-left: 20%;
+				text-align: left;
 			}
 
 		.feature-grid .feature:nth-child(even) .content, .feature-grid .feature:nth-child(even) .image {
 			float: left;
-			margin-left: 5%;
+			margin-left: 20%;
 			text-align: left;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1480px) {
 
 			.feature-grid .feature {
 				margin-bottom: 2em;
@@ -2029,7 +2029,7 @@
 
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1480px) {
 
 			.feature-grid .feature {
 				display: block;
@@ -2047,7 +2047,7 @@
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 1486px) {
 
 			.feature-grid .feature {
 				margin-bottom: 1em;
@@ -2055,7 +2055,7 @@
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 1480px) {
 
 			.feature-grid .feature .content,
 			.feature-grid .feature .image {
