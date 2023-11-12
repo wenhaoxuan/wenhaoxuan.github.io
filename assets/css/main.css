@@ -2011,14 +2011,14 @@
 
 		.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
 				float: left;
-				margin-left: 10%;
+				margin-left: 0%;
 				margin-right: 10%;
 				text-align: left;
 			}
 
 		.feature-grid .feature:nth-child(even) .content, .feature-grid .feature:nth-child(even) .image {
 			float: left;
-			margin-left: 10%;
+			margin-left: 0%;
 			margin-right: 10%;
 			text-align: left;
 		}
