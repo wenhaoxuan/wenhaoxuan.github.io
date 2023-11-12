@@ -1997,11 +1997,11 @@
 		}
 
 			.feature-grid .feature .content {
-				width: 100%;
+				width: 70%;
 			}
 
 			.feature-grid .feature .image {
-				width: 50%;
+				width: 30%;
 			}
 
 				.feature-grid .feature .image img {
