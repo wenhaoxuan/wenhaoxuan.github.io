@@ -2006,7 +2006,7 @@
 
 				.feature-grid .feature .image img {
 					display: inline;
-					max-width: 50%;
+					max-width: 100%;
 				}
 
 		.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
