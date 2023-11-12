@@ -1605,7 +1605,7 @@
 	}
 
 	body, input, select, textarea {
-		font-family: "sans-serif", Arial, Helvetica, sans-serif;
+		font-family: 'Garamond', sans-serif;
 		font-size: 13pt;
 		font-weight: 400;
 		line-height: 2em;
@@ -1734,7 +1734,7 @@
 		background: rgba(144, 144, 144, 0.075);
 		border-radius: 4px;
 		border: solid 1px;
-		font-family: "Garamond", monospace;
+		font-family: 'Garamond', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -1742,7 +1742,7 @@
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Garamond", monospace;
+		font-family: 'Garamond', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
@@ -2134,7 +2134,7 @@
 		.select-wrapper:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: Garamond;
+			font-family: 'Garamond', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2200,7 +2200,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: Garamond;
+				font-family: 'Garamond', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2280,7 +2280,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: Garamond;
+			font-family: 'Garamond', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2940,7 +2940,7 @@
 		.navPanelToggle:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: Garamond;
+			font-family: 'Garamond', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -3044,7 +3044,7 @@
 			#navPanel .close:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Garamond', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
