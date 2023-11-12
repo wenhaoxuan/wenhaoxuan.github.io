@@ -1997,25 +1997,19 @@
 		}
 
 			.feature-grid .feature .content {
-				width: 100%;
+				width: 70%;
 			}
 
 			.feature-grid .feature .image {
-				width: 100%;
+				width: 30%;
 			}
 
 				.feature-grid .feature .image img {
 					display: inline;
-					max-width: 100%;
+					max-width: 30%;
 				}
 
-			.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
-				float: right;
-				margin-right: 5%;
-				text-align: right;
-			}
-
-			.feature-grid .feature:nth-child(even) .content, .feature-grid .feature:nth-child(even) .image {
+			.feature-grid .content, .feature-grid .image {
 				float: left;
 				margin-left: 5%;
 				text-align: left;
@@ -2738,7 +2732,7 @@
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("../../images/BD_Art.jpg");
+			background-image: url("../../images/keck.jpg");
 			background-position: center center;
 			background-size: cover;
 		}
