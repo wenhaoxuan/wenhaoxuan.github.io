@@ -1606,7 +1606,7 @@
 
 	body, input, select, textarea {
 		font-family: 'Baskerville', sans-serif;
-		font-size: 20pt;
+		font-size: 18pt;
 		font-weight: 400;
 		line-height: 2em;
 	}
@@ -1997,7 +1997,7 @@
 		}
 
 			.feature-grid .feature .content {
-				width: 80%;
+				width: 70%;
 			}
 
 			.feature-grid .feature .image {
@@ -2011,14 +2011,14 @@
 
 		.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
 				float: left;
-				margin-left: 10%;
+				margin-left: 20%;
 				margin-right: 10%;
 				text-align: left;
 			}
 
 		.feature-grid .feature:nth-child(even) .content, .feature-grid .feature:nth-child(even) .image {
 			float: left;
-			margin-left: 10%;
+			margin-left: 20%;
 			margin-right: 10%;
 			text-align: left;
 		}
@@ -2594,7 +2594,7 @@
 	}
 
 		header.major h2 {
-			font-size: 3em;
+			font-size: 2em;
 		}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
@@ -2603,7 +2603,7 @@
 		}
 
 		header.major p {
-			font-size: 1.7em;
+			font-size: 1em;
 			margin-bottom: 0;
 		}
 
@@ -2614,11 +2614,11 @@
 		}
 
 			header.major h2 {
-				font-size: 2.5em;
+				font-size: 1.5em;
 			}
 
 			header.major p {
-				font-size: 1.3em;
+				font-size: 1em;
 			}
 
 	}
@@ -2626,11 +2626,11 @@
 	@media screen and (max-width: 980px) {
 
 		header.major h2 {
-			font-size: 2em;
+			font-size: 1em;
 		}
 
 		header.major p {
-			font-size: 1.1em;
+			font-size: 0.7em;
 		}
 
 	}
@@ -2646,7 +2646,7 @@
 	@media screen and (max-width: 480px) {
 
 		header.major h2 {
-			font-size: 1.75em;
+			font-size: 1.2em;
 		}
 
 	}
@@ -3109,14 +3109,14 @@
 		#banner h2 {
 			color: #ffffff;
 			display: inline-block;
-			font-size: 3em;
+			font-size: 2em;
 			line-height: 1.35;
 			margin-bottom: 0.5em;
 		}
 
 		#banner p {
 			color: #aaa;
-			font-size: 1.5em;
+			font-size: 1em;
 			margin-bottom: 1.75em;
 			text-transform: uppercase;
 		}
@@ -3128,7 +3128,7 @@
 			}
 
 				#banner h2 {
-					font-size: 2.5em;
+					font-size: 1.5em;
 				}
 
 		}
@@ -3152,11 +3152,11 @@
 				}
 
 				#banner h2 {
-					font-size: 2.25em;
+					font-size: 1.5em;
 				}
 
 				#banner p {
-					font-size: 1.25em;
+					font-size: 1em;
 				}
 
 		}
