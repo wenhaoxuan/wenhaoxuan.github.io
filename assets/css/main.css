@@ -2023,7 +2023,7 @@
 			text-align: left;
 		}
 
-		@media screen and (max-width: 1080px) {
+		@media screen and (max-width: 1200px) {
 
 			.feature-grid .feature {
 				margin-bottom: 2em;
@@ -2031,7 +2031,7 @@
 
 		}
 
-		@media screen and (max-width: 1080px) {
+		@media screen and (max-width: 1200px) {
 
 			.feature-grid .feature {
 				display: block;
@@ -2049,7 +2049,7 @@
 
 		}
 
-		@media screen and (max-width: 1080px) {
+		@media screen and (max-width: 1200px) {
 
 			.feature-grid .feature {
 				margin-bottom: 1em;
@@ -2057,7 +2057,7 @@
 
 		}
 
-		@media screen and (max-width: 1080px) {
+		@media screen and (max-width: 1200px) {
 
 			.feature-grid .feature .content,
 			.feature-grid .feature .image {
