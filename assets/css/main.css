@@ -1993,11 +1993,11 @@
 			display: inline-block;
 			float: left;
 			margin-bottom: 3em;
-			width: 80%;
+			width: 100%;
 		}
 
 			.feature-grid .feature .content {
-				width: 70%;
+				width: 90%;
 			}
 
 			.feature-grid .feature .image {
@@ -2006,7 +2006,7 @@
 
 				.feature-grid .feature .image img {
 					display: inline;
-					max-width: 80%;
+					max-width: 90%;
 				}
 
 		.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
