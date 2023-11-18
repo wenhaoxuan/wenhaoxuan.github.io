@@ -1993,11 +1993,11 @@
 			display: inline-block;
 			float: left;
 			margin-bottom: 3em;
-			width: 85%;
+			width: 80%;
 		}
 
 			.feature-grid .feature .content {
-				width: 90%;
+				width: 60%;
 			}
 
 			.feature-grid .feature .image {
@@ -2006,24 +2006,24 @@
 
 				.feature-grid .feature .image img {
 					display: inline;
-					max-width: 90%;
+					max-width: 80%;
 				}
 
 		.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
 				float: left;
-				margin-left: 15%;
-				margin-right: 15%;
+				margin-left: 20%;
+				margin-right: 20%;
 				text-align: left;
 			}
 
 		.feature-grid .feature:nth-child(even) .content, .feature-grid .feature:nth-child(even) .image {
 			float: left;
-			margin-left: 15%;
-			margin-right: 15%;
+			margin-left: 20%;
+			margin-right: 20%;
 			text-align: left;
 		}
 
-		@media screen and (max-width: 1200px) {
+		@media screen and (max-width: 1000px) {
 
 			.feature-grid .feature {
 				margin-bottom: 2em;
@@ -2031,7 +2031,7 @@
 
 		}
 
-		@media screen and (max-width: 1200px) {
+		@media screen and (max-width: 1000px) {
 
 			.feature-grid .feature {
 				display: block;
@@ -2049,7 +2049,7 @@
 
 		}
 
-		@media screen and (max-width: 1200px) {
+		@media screen and (max-width: 1000px) {
 
 			.feature-grid .feature {
 				margin-bottom: 1em;
@@ -2057,7 +2057,7 @@
 
 		}
 
-		@media screen and (max-width: 1200px) {
+		@media screen and (max-width: 1000px) {
 
 			.feature-grid .feature .content,
 			.feature-grid .feature .image {
