@@ -98,24 +98,29 @@
 
 							<ul class="actions">
 								<style>
-								    .flex-container {
-								        display: flex; /* Use flexbox */
-								        flex-wrap: wrap; /* Allow items to wrap to the next line */
+								    ul {
 								        list-style-type: none; /* Remove default list styling */
 								        padding: 0; /* Remove default padding */
 								    }
-								    .flex-container li {
-								        flex: 1 1 30%; /* Flex grow, flex shrink, and base width */
-								        margin: 5px; /* Space between items */
+								    .list-row {
+								        margin-bottom: 20px; /* Space between the rows */
+								    }
+								    .list-row li {
+								        display: inline-block; /* Display list items inline */
+								        margin-right: 5px; /* Space between items */
 								    }
 								</style>
 								
-								<ul class="flex-container">
-								    <li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...937...54X/abstract" class="button small">Atmospheric Retrievals Paper I</a></li>
-								    <li><a href="https://ui.adsabs.harvard.edu/abs/2023JATIS...9c5001X/abstract" class="button small">Speckle Nulling</a></li>
-								    <li><a href="https://ui.adsabs.harvard.edu/abs/2023JATIS...9c5002E/abstract" class="button small">Vortex Fiber Nuller Paper I</a></li>
-								    <li><a href="https://ui.adsabs.harvard.edu/abs/2021JATIS...7c5006D/abstract" class="button small">Instrument Paper</a></li>
-								    <li><a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...838...92M/abstract" class="button small">Fiber Injection Unit</a></li>
+								<ul>
+								    <div class="list-row">
+								        <li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...937...54X/abstract" class="button small">Atmospheric Retrievals Paper I</a></li>
+								        <li><a href="https://ui.adsabs.harvard.edu/abs/2023JATIS...9c5001X/abstract" class="button small">Speckle Nulling</a></li>
+								        <li><a href="https://ui.adsabs.harvard.edu/abs/2023JATIS...9c5002E/abstract" class="button small">Vortex Fiber Nuller Paper I</a></li>
+								    </div>
+								    <div class="list-row">
+								        <li><a href="https://ui.adsabs.harvard.edu/abs/2021JATIS...7c5006D/abstract" class="button small">Instrument Paper</a></li>
+								        <li><a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...838...92M/abstract" class="button small">Fiber Injection Unit</a></li>
+								    </div>
 								</ul>
 
 							</ul>
