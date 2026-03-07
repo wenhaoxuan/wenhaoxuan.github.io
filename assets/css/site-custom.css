@@ -103,7 +103,7 @@
 
 #research .feature-grid .feature .content > header h4 {
 	color: #173348;
-	font-size: 2.05rem;
+	font-size: 2.35rem;
 	font-weight: 700;
 	letter-spacing: 0.01em;
 	line-height: 1.2;
@@ -113,8 +113,8 @@
 }
 
 #research .feature-grid .feature .image img {
-	border-radius: 8px;
-	box-shadow: 0 10px 28px rgba(24, 43, 56, 0.16);
+	border-radius: 0;
+	box-shadow: none;
 	height: auto !important;
 	max-width: 100%;
 	width: 100% !important;
@@ -164,7 +164,7 @@
 
 #research .feature-grid .feature.feature-jwst-frontier .jwst-subsection:first-of-type {
 	border-top: 0;
-	margin-top: 0.6rem;
+	margin-top: 1.7rem;
 	padding-top: 0;
 }
 
@@ -199,8 +199,8 @@
 }
 
 #research .feature-grid .feature.feature-kpic .kpic-co-highlight {
-	border: 2px solid rgba(47, 158, 216, 0.35);
-	box-shadow: 0 12px 30px rgba(19, 56, 80, 0.2);
+	border: 0;
+	box-shadow: none;
 	margin: 0 auto;
 	max-width: min(100%, 47.4rem);
 }
@@ -218,12 +218,30 @@
 	width: auto !important;
 }
 
-#research .feature-grid .feature.feature-gliese229 .image {
+#research .feature-grid .feature .section-figure {
+	margin: 0.4rem 0 0.95rem 0;
+}
+
+#research .feature-grid .feature .section-figure img {
+	border-radius: 0;
+	box-shadow: none;
+	width: 100% !important;
+}
+
+#research .feature-grid .feature .section-figure-kpic {
+	max-width: min(100%, 47.4rem);
+}
+
+#research .feature-grid .feature .section-figure-gliese {
 	max-width: min(100%, 68rem);
 }
 
 #research .feature-grid .feature.feature-nirc2 .image {
 	max-width: min(100%, 25rem);
+}
+
+#research .feature-grid .feature .section-figure-nirc2 {
+	max-width: min(100%, 31.25rem);
 }
 
 #research .feature-grid .feature.feature-nirc2 .image img {
@@ -256,7 +274,7 @@
 
 #research .feature-grid .feature.feature-gaia .gaia-subsection-figure {
 	margin: 0.3rem 0 0.85rem 0;
-	max-width: min(100%, 25rem);
+	max-width: min(100%, 31.25rem);
 }
 
 #research .feature-grid .feature.feature-gaia .gaia-subsection-figure img {
@@ -274,6 +292,41 @@
 	max-width: 48rem;
 	object-fit: cover;
 	width: min(100%, 70%);
+}
+
+#outreach .mentor-roster {
+	margin-top: 1.1rem;
+}
+
+#outreach .mentor-entry {
+	border-top: 1px solid rgba(32, 48, 61, 0.14);
+	margin-top: 0.75rem;
+	padding-top: 0.75rem;
+}
+
+#outreach .mentor-entry:first-child {
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#outreach .mentor-head {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.02rem;
+	gap: 0.5rem;
+	justify-content: space-between;
+	margin: 0 0 0.12rem 0;
+}
+
+#outreach .mentor-head span {
+	color: var(--subhead);
+	font-weight: 700;
+}
+
+#outreach .mentor-project {
+	color: #3c4f5f;
+	margin: 0;
 }
 
 .kpic-links {
