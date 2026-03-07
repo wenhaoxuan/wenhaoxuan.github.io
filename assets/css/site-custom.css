@@ -233,6 +233,26 @@
 	text-transform: none;
 }
 
+#research .feature-grid .feature.feature-kpic .content > header .kpic-title {
+	color: #1f5e38;
+}
+
+#research .feature-grid .feature.feature-gliese229 .content > header h4 {
+	color: #5b2f7d;
+}
+
+#research .feature-grid .feature.feature-gaia .content > header h4 {
+	color: #2f5f66;
+}
+
+#research .feature-grid .feature.feature-hot-jupiter .content > header h4 {
+	color: #6b4426;
+}
+
+#research .feature-grid .feature.feature-nirc2 .content > header h4 {
+	color: #6d2f62;
+}
+
 #research .feature-grid .feature .image img {
 	border-radius: 0;
 	box-shadow: none;
