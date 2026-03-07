@@ -11,6 +11,14 @@
 				--ink: #20303d;
 			}
 
+			#header nav ul li {
+				margin-left: 1.45em;
+			}
+
+			#header nav ul li:first-child {
+				margin-left: 0;
+			}
+
 			#header nav ul li a.tab-link {
 				border: 1px solid rgba(255, 255, 255, 0.35);
 				border-radius: 999px;
@@ -59,7 +67,8 @@
 			}
 
 			#research .container,
-			#outreach .container {
+			#outreach .container,
+			#publications .container {
 				max-width: 84rem;
 				width: 92%;
 			}
@@ -109,22 +118,47 @@
 				width: 100% !important;
 			}
 
-			#research .feature-grid > .image {
-				margin: 0 auto 3.2rem auto;
-				max-width: 50rem;
-				text-align: center;
+			#research .feature-grid .feature.feature-gliese229 .image {
+				flex-basis: min(52%, 42rem);
 			}
 
-			#research .feature-grid > .image img {
-				border-radius: 8px;
-				box-shadow: 0 10px 28px rgba(24, 43, 56, 0.16);
-				height: auto !important;
+			.hr8799-stack,
+			.kpic-image-stack {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				width: 100%;
+			}
+
+			#research .feature-grid .feature .hr8799-stack img,
+			#research .feature-grid .feature .kpic-image-stack img {
+				display: block;
+				width: auto !important;
+			}
+
+			#research .feature-grid .feature .hr8799-stack .cs-on-plot {
+				margin: 0 auto;
+				max-width: 92%;
+			}
+
+			#research .feature-grid .feature .hr8799-stack .hr8799-plot {
+				margin: 0 auto;
 				max-width: 100%;
-				width: 100% !important;
+			}
+
+			#research .feature-grid .feature .kpic-image-stack .kpic-logo {
+				margin: 0 auto;
+				max-width: min(72%, 17rem);
+			}
+
+			#research .feature-grid .feature .kpic-image-stack .kpic-co {
+				margin: 0 auto;
+				max-width: min(82%, 22rem);
 			}
 
 			#research .actions li,
-			#outreach .actions li {
+			#outreach .actions li,
+			#publications .actions li {
 				margin: 0.35rem 0.4rem 0 0;
 			}
 
@@ -146,6 +180,42 @@
 				margin: 0 !important;
 			}
 
+			#publications .pub-summary {
+				color: var(--ink);
+				font-size: 0.95em;
+				margin: 0 auto 2.5rem auto;
+				max-width: 78rem;
+			}
+
+			#publications .pub-summary p {
+				margin-bottom: 0.65rem;
+			}
+
+			#publications .pub-group {
+				margin-bottom: 2.5rem;
+			}
+
+			#publications .pub-group h3 {
+				font-size: 1.2rem;
+				margin-bottom: 0.8rem;
+				text-transform: none;
+			}
+
+			#publications ol {
+				list-style: decimal;
+				margin: 0 0 0 1.5rem;
+				padding: 0;
+			}
+
+			#publications ol li {
+				margin-bottom: 1.1rem;
+				padding-left: 0.35rem;
+			}
+
+			#publications .pub-entry {
+				margin: 0;
+			}
+
 			#publications,
 			#research,
 			#outreach {
@@ -153,6 +223,15 @@
 			}
 
 			@media screen and (max-width: 980px) {
+				#header nav ul li {
+					margin-left: 0.7em;
+				}
+
+				#header nav ul li a.tab-link {
+					font-size: 0.64em;
+					padding: 0.55em 0.85em;
+				}
+
 				#research .feature-grid .feature {
 					flex-direction: column;
 					gap: 1.4rem;
@@ -165,6 +244,10 @@
 				}
 
 				#research header.major.special {
+					text-align: center;
+				}
+
+				#publications .pub-group h3 {
 					text-align: center;
 				}
 
@@ -187,14 +270,14 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<nav id="nav">
-					<ul>
-						<li><a href="#research" class="tab-link active" data-tab-link="research">Research</a></li>
-						<li><a href="#publications">Publications</a></li>
-						<li><a href="#outreach" class="tab-link" data-tab-link="outreach">Outreach and Mentoring</a></li>
-					</ul>
-				</nav>
-			</header>
+					<nav id="nav">
+						<ul>
+							<li><a href="#research" class="tab-link active" data-tab-link="research">Research</a></li>
+							<li><a href="#publications" class="tab-link" data-tab-link="publications">Selected Publications</a></li>
+							<li><a href="#outreach" class="tab-link" data-tab-link="outreach">Outreach and Mentoring</a></li>
+						</ul>
+					</nav>
+				</header>
 
 	<!-- Banner -->
 		<section id="banner">
@@ -253,14 +336,19 @@
 				</header>
 				<div class="feature-grid">
 					
-					<div class="feature">
-						<div class="image"><img src="images/HR8799.jpg" alt="" ></div>
+					<div class="feature feature-hr8799">
+						<div class="image">
+							<div class="hr8799-stack">
+								<img src="images/c_s_o_n_planets_plot.png" class="cs-on-plot" alt="">
+								<img src="images/hr8799_cartoon_plot.png" class="hr8799-plot" alt="">
+							</div>
+						</div>
 						<div class="content">
 							<header>
 								<h4>Metal enrichment and volatile-to-refractory abundances in the four HR 8799 planets</h4>
 								<p>Collaboration with Jean-Baptiste Ruffio, Yayaati Chachan, Kazumasa Ohno and others; part of GTO 1188 (PI: Hodapp)</p>
 							</header>
-							<p>I am leading two atmospheric retrieval studies for HR 8799 b, c, d, e using exquisite 3-5 micron JWST/NIRSpec data (R~2700). 
+							<p>I led two atmospheric retrieval studies for the four gas giants around HR 8799 using exquisite 3-5 micron JWST/NIRSpec spectroscopy (R~2700). 
 							These iconic planets (5-9 MJup) orbit their star between 16-71 AU, and have posed challenges to planet formation theories. 
 							We obtained the first detections of H2S, CO2, CH4, and NH3 in these planets, and made the first direct measurements of solid accretion from S/H. These results mark a new era in precise atmospheric studies of directly imaged planets.
 							Here's the <a href=https://today.ucsd.edu/story/how-big-can-a-planet-be>press release story</a>.</p>
@@ -274,8 +362,13 @@
 
 					<div class="feature">
 					</div>
-					<div class="feature">
-						<div class="image"><img src="images/kpic_logo.png" alt=""></div>
+					<div class="feature feature-kpic">
+						<div class="image">
+							<div class="kpic-image-stack">
+								<img src="images/kpic_logo.png" class="kpic-logo" alt="">
+								<img src="images/c_h_co_contours_withHJs.png" class="kpic-co" alt="">
+							</div>
+						</div>
 						<div class="content">
 							<header>
 								<h4>High-resolution spectroscopy with KPIC</h4>
@@ -297,13 +390,11 @@
 								<a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965L..15E/abstract" class="button small">Vortex Fiber Nuller: Science</a>
 								<a href="https://ui.adsabs.harvard.edu/abs/2021JATIS...7c5006D/abstract" class="button small">Instrument Paper</a>
 								<a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...838...92M/abstract" class="button small">Fiber Injection Unit</a>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="image" style="text-align: center;"><img src="images/c_h_co_contours_withHJs.png" alt="" width="500px" height="auto"></div>
-
-						<div class="feature">
+							<div class="feature">
 						<div class="image"><img src="images/AFLep_planets_with_spec.png" alt="" width=500px height=auto></div>
 						<div class="content">
 							<header>
@@ -335,11 +426,11 @@
 
 
 
-						<div class="feature">
-						<div class="image"><img src="images/gliese229_fig1.png" alt="" style="width: 500px; height: auto;"></div>
-						<div class="content">
-							<header>
-								<h4>Revealing tight (<1 AU) brown dwarf binaries: Gliese 229 Bab and more</h4>
+							<div class="feature feature-gliese229">
+							<div class="image"><img src="images/gliese229_fig1.png" alt=""></div>
+							<div class="content">
+								<header>
+									<h4>Revealing tight (<1 AU) brown dwarf binaries: Gliese 229 Bab and more</h4>
 								<p></p>
 							</header>
 							<p>I led a study to spatially and spectrally resolve the first brown dwarf companion, Gliese 229 B, into two nearly equal mass brown dwarfs, Gliese 229Ba and Bb. The two brown dwarfs orbit each other every 12 days, as they orbit a M dwarf every 250 years. The discovery resolved a significant discrepancy between the dynamical mass of Gliese 229 B and its luminosity. 
@@ -352,16 +443,30 @@
 							<li><a href="https://www.nature.com/articles/s41586-024-08064-x" class="button small">Xuan et al. 2024c, Nature</a></li>
 							</ul>
 						</div>
-					</div>
-
-					<div class="feature">
-						<div class="content">
-							<header>
-								<h4>The origins of hot Jupiters in stellar binary systems</h4>
-							</header>
-							<p>I've launched a campaign to refine the orbital eccentricities and inclinations of stellar companions to hot Jupiters. This survey will reveal whether the orbital properties of stellar companions contribute to hot Jupiter formation. My team was awarded two Keck nights in 2026 to initiate the survey.</p>
 						</div>
-					</div>
+
+						<div class="feature">
+							<div class="content">
+								<header>
+									<h4>Planet architectures and demographics with Gaia astrometry</h4>
+									<p>Collaborators: William Thompson, Dori Blakely, Brendan Bowler, and others.</p>
+								</header>
+								<p>Gaia DR4 (around 2027) and DR5 (after 2030) epoch astrometry will identify thousands of new giant planets and transform studies of planetary demographics and architectures. To prepare for this transition, I co-developed a new absolute astrometry framework that combines Gaia DR2 and DR3, astrometric excess noise, and Hipparcos measurements (Thompson, Blakely, Xuan et al. submitted). The resulting calibrated catalog is integrated into the open-source orbit code Octofitter and supports modeling of Gaia epoch astrometry. With collaborators, we are carrying out intensive ground-based vetting campaigns with Keck and Lick Observatory to rule out false positive scenarios.</p>
+								<ul class="actions">
+									<li><a href="https://arxiv.org/abs/2602.00235" class="button small">Thompson, Blakely, Xuan et al. 2026</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="feature">
+							<div class="content">
+								<header>
+									<h4>The origins of hot Jupiters in stellar binary systems</h4>
+								</header>
+								<p>I've launched a campaign to refine the orbital eccentricities and inclinations of stellar companions to hot Jupiters. This survey will reveal whether the orbital properties of stellar companions contribute to hot Jupiter formation. My team was awarded two Keck nights in 2026 to initiate the survey.</p>
+								<p>In collaboration with Marvin Morgan.</p>
+							</div>
+						</div>
 	
 
 					<div class="feature">
@@ -411,105 +516,63 @@
 						</div>
 					</div>
 
-					<div style="max-width:1400px; display:block; margin: 0 auto;">
-						<p style="font-size:18px;"><b>Selected Publications</b></p>
-						<p style="font-size:18px;"><b>Summary: 57 refereed publications. 11 first author, 9 second author, 9 third author. 1000+ citations. The list below only includes 1st, 2nd, and 3rd author papers.</b><br>
-					<ol>
-
-						<li>
-						<p><b>Xuan, J.W.</b>, Ruffio, J-B. (shared first authorship), Chachan, Y., et al. (2026) The compositions of the HR 8799 planets reflect accretion of both solids and metal-enriched gas</a>. submitted to ApJ</p>
-						</li>
-						
-						<li>
-						<p>Ruffio, J-B., <b>Xuan, J.W. (shared first authorship)</b>, Chachan, Y., et al. (2025) Jupiter-like uniform metal enrichment in a system of multiple giant exoplanets</a>. Nature Astronomy, in press</p>
-						</li>
-
-						<li>
-						<p><b>Xuan, J.W.</b>, Mérand, A., Thompson, W., et al. (2024) <a href="https://www.nature.com/articles/s41586-024-08064-x" style="color:#3296d9;">The cool brown dwarf Gliese 229 B is a close binary</a>. Nature, 634, 1070–1074</p>
-						</li>
-
-						<li>
-						<p><b>Xuan, J.W.</b>, Perrin, M., and Mawet, D., et al. (2024).<a href="https://arxiv.org/abs/2411.10571" style="color:#3296d9;">Atmospheric abundances and bulk properties of the binary brown dwarf Gliese 229 Bab from JWST/MIRI spectroscopy</a> ApJL, 977, L32</p>
-						</li>
-						
-    						<li>
-						<p><b>Xuan, J.W.</b>, Hsu, D., Finnerty, L., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...71X/abstract" style="color:#3296d9;">Are these planets or brown dwarfs? Broadly solar compositions from high-resolution atmospheric retrievals of ~10-30 MJup</a>. ApJ, 962, 10</p>
-						</li>
-						
-						<li>
-						<p><b>Xuan, J.W.</b>, Wang, J., Finnerty, L., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...962...10X/abstract" style="color:#3296d9;">Validation of elemental and isotopic abundances in late-M spectral types with the benchmark HIP 55507 AB system</a>. ApJ, 962, 10</p>
-						</li>
-						<li>
-						<p><b>Xuan, J.W.</b>, Wang, J., Ruffio, J.-B., et al. (2022) <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...937...54X/abstract" style="color:#3296d9;">A Clear View of a Cloudy Brown Dwarf Companion from High-resolution Spectroscopy</a>. ApJ, 937, 54</p>
-						</li>
-						<li>
-						<p><b>Xuan, J.W.</b> & Wyatt, M.C. (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.2096X/abstract" style="color:#3296d9;">Evidence for a high mutual inclination between the cold Jupiter and transiting super Earth orbiting π Men</a>. MNRAS, 497, 2096</p>
-						</li>
-						<li>
-						<p><b>Xuan, J.W.</b>, Kennedy, G.M., Wyatt, M.C., Yelverton, B. (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.499.5059X/abstract" style="color:#3296d9;">Mutual inclinations between giant planets and their debris discs in HD 113337 and HD 38529</a>. MNRAS, 499, 5059</p>
-						</li>
-						<li>
-						<p><b>Xuan, J.W.</b>, Bryan, M.L., Knutson., et al (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020AJ....159...97X/abstract" style="color:#3296d9;">A Rotation Rate for the Planetary-mass Companion DH Tau b</a>. AJ, 159, 979</p>
-						</li>
-
-						<li>
-						<p><b>Xuan, J.W.</b>, Mawet, D., Ngo, H., Ruane., et al. (2018) <a href="https://ui.adsabs.harvard.edu/abs/2018AJ....156..156X/abstract" style="color:#3296d9;">Characterizing the Performance of the NIRC2 Vortex Coronagraph at W. M. Keck Observatory</a>. AJ, 156, 156</p>
-						</li>
-
-						<li>	
-						<p>Wang, G. (student-led)<b>, Xuan, J.W.</b>, Gonzalez Picos, D., et al. (2025) Chemical and Isotopic Homogeneity Between the L Dwarf CD-35 2722~B and its Early M Host Star</a>submitted to AJ</p>
-						</li>
-						
-						<li>	
-						<p>Zhang, Y.<b>, Xuan, J.W.</b>, Mawet, D., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..131Z/abstract" style="color:#3296d9;">Atmospheric characterization of the super-Jupiter HIP 99770 b with KPIC</a>.AJ, 168, 131</p>
-						</li>
-						<li>
-						<p>Finnerty, L.<b>, Xuan, J.W.</b>, Xin, Y., et al. (2023) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167...43F/abstract" style="color:#3296d9;">Atmospheric metallicity and C/O of HD 189733 b from high-resolution spectroscopy</a>. AJ, 167, 43</p>
-						</li>
-						<li>
-						<p>Sanghi, A. (student-led)<b>,Xuan, J.W.</b>, Wang, J., et al. (2024) <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ad769f" style="color:#3296d9;">Efficiently Searching for Close-in Companions around Young M Dwarfs using a Multi-year PSF Library</a>.AJ, 168, 215</p>
-						</li>
-						<li>
-						<p>Costes, J., <b>Xuan, J.W.</b>, Vigan, A., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...686A.294C/abstract" style="color:#3296d9;">Fresh view of the hot brown dwarf HD 984 B through high-resolution spectroscopy</a>. A&A, 686, A294</p>
-						</li>
-						<li>
-						<p>Hejazi, N., <b>Xuan, J.W.</b>, Cristofari, P., in review at ApJL.<a href="https://arxiv.org/abs/2411.15591" style="color:#3296d9;">Chemical Links between a Young M-type T Tauri star  and its Substellar Companion: Spectral Analysis and  C/O Measurement of DH Tau A</a> ApJ, 978, 42</p>
-						</li>
-						<li>
-						<p>Echeverri, D., <b>Xuan, J.W.</b>, Jovanovic, N., et al. (2023) <a href="https://ui.adsabs.harvard.edu/abs/2023JATIS...9c5002E/abstract" style="color:#3296d9;">Vortex Fiber Nulling for Exoplanet Observations: Implementation and First Light</a>. JATIS, 9, 035002</p>
-						</li>
-						<li>
-						<p>Echeverri, D., <b>Xuan, J.W.</b>, Monnier, J., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965L..15E/abstract" style="color:#3296d9;">Vortex Fiber Nulling for Exoplanet Observations: First Direct Detection of M Dwarf Companions around HIP 21543, HIP 94666, and HIP 50319</a>. ApJL 965, L15</p>
-						</li>
-						<li>
-						<p>Xin Y., <b>Xuan, J.W.</b>, Mawet, D., et al. (2023) <a href="https://ui.adsabs.harvard.edu/abs/2023JATIS...9c5001X/abstract" style="color:#3296d9;">On-sky speckle nulling through a single-mode fiber with the Keck Planet Imager and Characterizer</a>. JATIS 9, 035001</p>
-						</li>
-						<li>
-						<p>Hsu C.-C., Wang, J.J, <b>Xuan, J.W.</b> et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...971....9H/abstract" style="color:#3296d9;">Rotation and Abundances of the Benchmark Brown Dwarf HD 33632 Ab from Keck/KPIC High-resolution Spectroscopy</a>. ApJ 971, 9</p>
-						</li>
-						<li>
-						<p>Inglis, J., Wallack, N., <b>Xuan, J.W.</b>, et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167..218I/abstract" style="color:#3296d9;">Atmospheric Retrievals of the Young Giant Planet ROXs 42B b from Low- and High-resolution Spectroscopy</a>.AJ 167, 218</p>
-						<li>
-						<p>Mawet, D., Ruane, G., <b>Xuan, W.</b>, et al. (2017) <a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...838...92M/abstract" style="color:#3296d9;">Observing Exoplanets with High-dispersion Coronagraphy. II. Demonstration of an Active Single-mode Fiber Injection Unit</a>. ApJ, 838, 92</p>
-						</li>
-					</ol>
-						
 					</div>
-		
 				</div>
-			</div>
-		</section>
-				<!-- Four -->
-					<section id="publications" class="wrapper style3 special">
-						<div class="container">
-							<header class="major">
-								<p>Click below for a full list of my publications (ADS).</p>
-							</header>
-							<ul class="actions">
-								<li><a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A%220000-0002-6618-1137&sort=date%20desc%2C%20bibcode%20desc" class="button special">My Papers</a></li>
-							</ul>
-						</div>
-					</section>
+			</section>
+					<!-- Four -->
+						<section id="publications" class="wrapper style1 tab-panel" data-tab-panel="publications">
+							<div class="container">
+								<header class="major special">
+									<h2>Selected Publications</h2>
+								</header>
+								<div class="pub-summary">
+									<p><b>Refereed Journal Articles:</b> 63 total. <b>First-author:</b> 11. <b>Second-author:</b> 9. <b>Third-author:</b> 10.</p>
+									<p><b>Student-led papers:</b> 4. <b>Total citations:</b> 1,174. <b>h-index:</b> 23.</p>
+								</div>
+
+								<div class="pub-group">
+									<h3>First-author Papers</h3>
+									<ol>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Ruffio, J.-B., Chachan, Y., Ohno, K., et al. (2026) <a href="https://arxiv.org/abs/2602.09422">The compositions of the HR 8799 planets reflect accretion of both solids and metal-enriched gas</a>. ApJ, accepted.</p></li>
+										<li><p class="pub-entry">Ruffio, J.-B., <b>Xuan, J.W.</b>, Chachan, Y., Kesseli, A., et al. (2026) <a href="https://doi.org/10.1038/s41550-026-02783-z">Jupiter-like uniform metal enrichment in a system of multiple giant exoplanets</a>. Nature Astronomy.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, M&eacute;rand, A., Thompson, W., et al. (2024) <a href="https://www.nature.com/articles/s41586-024-08064-x">The cool brown dwarf Gliese 229 B is a close binary</a>. Nature, 634, 1070-1074.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Perrin, M., Mawet, D., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...977L..32X/abstract">Atmospheric abundances and bulk properties of the binary brown dwarf Gliese 229 Bab from JWST/MIRI spectroscopy</a>. ApJL, 977, L32.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Hsu, D., Finnerty, L., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...71X/abstract">Are these planets or brown dwarfs? Broadly solar compositions from high-resolution atmospheric retrievals of 10-30 MJup companions</a>. ApJ, 970, 71.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Wang, J., Finnerty, L., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...962...10X/abstract">Validation of elemental and isotopic abundances in late-M spectral types with the benchmark HIP 55507 AB system</a>. ApJ, 962, 10.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Wang, J., Ruffio, J.-B., et al. (2022) <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...937...54X/abstract">A Clear View of a Cloudy Brown Dwarf Companion from High-resolution Spectroscopy</a>. ApJ, 937, 54.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b> and Wyatt, M.C. (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.2096X/abstract">Evidence for a high mutual inclination between the cold Jupiter and transiting super Earth orbiting pi Men</a>. MNRAS, 497, 2096.</p></li>
+										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Kennedy, G.M., Wyatt, M.C., Yelverton, B. (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.499.5059X/abstract">Mutual inclinations between giant planets and their debris discs in HD 113337 and HD 38529</a>. MNRAS, 499, 5059.</p></li>
+									</ol>
+								</div>
+
+								<div class="pub-group">
+									<h3>Student-led Papers</h3>
+									<ol>
+										<li><p class="pub-entry">Wang, G., <b>Xuan, J.W.</b>, Gonz&aacute;lez Picos, D., Zhang, Z., et al. (2026) <a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...997..195W/abstract">Chemical and Isotopic Homogeneity between the L Dwarf CD-35 2722 B and Its Early M Host Star</a>. ApJ, 997, 195.</p></li>
+										<li><p class="pub-entry">Sanghi, A., Thompson, W., Mang, J., <b>Xuan, J.W.</b>, et al. (2026) <a href="https://ui.adsabs.harvard.edu/search/q=title%3A%22Worlds%20Next%20Door.%20IV.%20Mapping%20the%20Late%20Stages%20of%20Giant%20Planet%20Evolution%20with%20a%20Precise%20Dynamical%20Mass%20and%20Luminosity%20for%20eps%20Ind%20Ab%22">Worlds Next Door. IV. Mapping the Late Stages of Giant Planet Evolution with a Precise Dynamical Mass and Luminosity for eps Ind Ab</a>. ApJ, submitted.</p></li>
+										<li><p class="pub-entry">Sanghi, A., <b>Xuan, J.W.</b>, Wang, J.J., Mawet, D., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..215S/abstract">Efficiently Searching for Close-in Companions Around Young M Dwarfs Using a Multiyear PSF Library</a>. AJ, 168, 215.</p></li>
+									</ol>
+								</div>
+
+								<div class="pub-group">
+									<h3>Second/Third-author Papers</h3>
+									<ol>
+										<li><p class="pub-entry">Thompson, W., Blakely, D., <b>Xuan, J.W.</b>, Blouin, S., et al. (2026) <a href="https://arxiv.org/abs/2602.00235">Detecting and Characterizing Companions with a Calibrated Gaia DR2, DR3, and Hipparcos Catalog (G23H)</a>. AJ, submitted.</p></li>
+										<li><p class="pub-entry">Finnerty, L., Fitzgerald, M.P., <b>Xuan, J.W.</b>, Echeverri, D., et al. (2026) <a href="https://arxiv.org/abs/2602.17777">Possible stratospheric emission in the warm Neptune GJ 436 b from high-resolution spectroscopy</a>. AJ, accepted.</p></li>
+										<li><p class="pub-entry">Hsu, C.-C., Wang, J.J., <b>Xuan, J.W.</b>, Zhang, Y., et al. (2026) <a href="https://arxiv.org/abs/2601.05976">Distinct Rotational Evolution of Giant Planets and Brown Dwarf Companions</a>. AJ, accepted.</p></li>
+										<li><p class="pub-entry">Zhang, Y., <b>Xuan, J.W.</b>, Mawet, D., Wang, J.J., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..131Z/abstract">Atmospheric Characterization of the Super-Jupiter HIP 99770 b with KPIC</a>. AJ, 168, 131.</p></li>
+										<li><p class="pub-entry">Hejazi, N., <b>Xuan, J.W.</b>, Coria, D.R., Sawczynec, E., et al. (2025) <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...978...42H/abstract">Chemical Links between a Young M-type T Tauri Star and Its Substellar Companion: Spectral Analysis and C/O Measurement of DH Tau A</a>. ApJ, 978, 42.</p></li>
+										<li><p class="pub-entry">Costes, J.C., <b>Xuan, J.W.</b>, Vigan, A., Wang, J., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...686A.294C/abstract">Fresh view of the hot brown dwarf HD 984 B through high-resolution spectroscopy</a>. A&amp;A, 686, A294.</p></li>
+										<li><p class="pub-entry">Echeverri, D., <b>Xuan, J.W.</b>, Monnier, J.D., Delorme, J.-R., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965L..15E/abstract">Vortex Fiber Nulling for Exoplanet Observations: First Direct Detection of M Dwarf Companions around HIP 21543, HIP 94666, and HIP 50319</a>. ApJL, 965, L15.</p></li>
+										<li><p class="pub-entry">Inglis, J., Wallack, N.L., <b>Xuan, J.W.</b>, Knutson, H.A., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167..218I/abstract">Atmospheric Retrievals of the Young Giant Planet ROXs 42B b from Low- and High-resolution Spectroscopy</a>. AJ, 167, 218.</p></li>
+									</ol>
+								</div>
+
+								<ul class="actions">
+									<li><a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A%220000-0002-6618-1137&sort=date%20desc%2C%20bibcode%20desc" class="button special">Full Publications (ADS)</a></li>
+								</ul>
+							</div>
+						</section>
 
 
 		<!-- Three -->
@@ -549,18 +612,20 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				(function () {
-					function resolveTabFromHash() {
-						var hash = window.location.hash.replace('#', '').toLowerCase();
-						if (hash === 'outreach') {
-							return 'outreach';
-						}
-						return 'research';
-					}
+				<script>
+					(function () {
+						var validTabs = ['research', 'publications', 'outreach'];
 
-					function setTab(tabName, shouldUpdateHash) {
-						var safeTab = tabName === 'outreach' ? 'outreach' : 'research';
+						function resolveTabFromHash() {
+							var hash = window.location.hash.replace('#', '').toLowerCase();
+							if (validTabs.indexOf(hash) !== -1) {
+								return hash;
+							}
+							return 'research';
+						}
+
+						function setTab(tabName, shouldUpdateHash) {
+							var safeTab = validTabs.indexOf(tabName) !== -1 ? tabName : 'research';
 
 						document.querySelectorAll('[data-tab-panel]').forEach(function (panel) {
 							var isActive = panel.getAttribute('data-tab-panel') === safeTab;
