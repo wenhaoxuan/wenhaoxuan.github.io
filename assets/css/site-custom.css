@@ -196,14 +196,41 @@
 }
 
 #research .feature-grid .feature {
+	border: 1px solid rgba(33, 58, 79, 0.11);
+	border-radius: 0.95rem;
 	display: block;
 	float: none;
 	margin-bottom: 2.15rem;
+	padding: 1rem 0.8rem 1.05rem 0.8rem;
 	width: 100%;
 }
 
 #research .feature-grid .feature:empty {
 	display: none;
+}
+
+#research .feature-grid .feature.feature-jwst-frontier {
+	background: #f4f9ff;
+}
+
+#research .feature-grid .feature.feature-kpic {
+	background: #f4fbf6;
+}
+
+#research .feature-grid .feature.feature-gliese229 {
+	background: #f8f4ff;
+}
+
+#research .feature-grid .feature.feature-gaia {
+	background: #fff8f1;
+}
+
+#research .feature-grid .feature.feature-hot-jupiter {
+	background: #fff7f1;
+}
+
+#research .feature-grid .feature.feature-nirc2 {
+	background: #fbf5fb;
 }
 
 #research .feature-grid .feature .content,
@@ -289,14 +316,32 @@
 	text-transform: none;
 }
 
-#research .feature-grid .feature.feature-jwst-frontier .figure-title {
-	color: #8a5a12;
-	font-size: 1.34rem;
-	font-style: italic;
-	letter-spacing: 0.01em;
-	line-height: 1.28;
-	margin: 0;
+.figure-caption {
+	border-top: 1px solid rgba(32, 48, 61, 0.16);
+	color: #5f6f7c;
+	font-size: 1.07rem;
+	letter-spacing: 0.005em;
+	line-height: 1.45;
+	margin: 0.25rem auto 0.45rem auto;
+	max-width: min(100%, 68%);
+	padding-top: 0.42rem;
 	text-align: center;
+}
+
+.figure-caption.figure-caption-primary {
+	border-top: 0;
+	color: #8a5a12;
+	font-size: 1.26rem;
+	font-style: italic;
+	margin: 0 0 0.1rem 0;
+	max-width: 100%;
+	padding-top: 0;
+}
+
+.figure-caption.figure-caption-secondary {
+	color: #7d4b0a;
+	font-size: 1.18rem;
+	margin-top: 0.2rem;
 }
 
 #research .feature-grid .feature.feature-jwst-frontier .jwst-hr8799-figures {
@@ -309,13 +354,6 @@
 	margin: 0 auto;
 	max-width: 68%;
 	width: 68% !important;
-}
-
-#research .feature-grid .feature.feature-jwst-frontier .figure-title-secondary {
-	color: #7d4b0a;
-	font-size: 1.28rem;
-	line-height: 1.3;
-	margin-top: 0.35rem;
 }
 
 #research .feature-grid .feature.feature-jwst-frontier .cs-on-plot {
@@ -454,6 +492,38 @@
 
 #research .feature-grid .feature.feature-gaia .gaia-subsection-figure img {
 	width: 100% !important;
+}
+
+#research .key-results {
+	background: rgba(255, 255, 255, 0.72);
+	border: 1px solid rgba(33, 58, 79, 0.14);
+	border-radius: 0.72rem;
+	margin: 0 0 0.95rem 0;
+	padding: 0.55rem 0.82rem 0.5rem 0.82rem;
+}
+
+#research .key-results-title {
+	color: #2f4d66;
+	font-size: 0.92rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	margin: 0 0 0.32rem 0;
+	text-transform: uppercase;
+}
+
+#research .key-results ul {
+	margin: 0;
+	padding-left: 1.25rem;
+}
+
+#research .key-results li {
+	font-size: 1.03rem;
+	line-height: 1.5;
+	margin-bottom: 0.22rem;
+}
+
+#research .key-results li:last-child {
+	margin-bottom: 0;
 }
 
 #research .actions li,
@@ -645,8 +715,20 @@
 		width: 85% !important;
 	}
 
-	#research .feature-grid .feature.feature-jwst-frontier .figure-title-secondary {
-		font-size: 1.2rem;
+	.figure-caption.figure-caption-primary {
+		font-size: 1.12rem;
+	}
+
+	.figure-caption.figure-caption-secondary {
+		font-size: 1.03rem;
+	}
+
+	#research .feature-grid .feature {
+		padding: 0.82rem 0.55rem 0.88rem 0.55rem;
+	}
+
+	#research .key-results li {
+		font-size: 0.96rem;
 	}
 
 	#research .feature-grid .feature.feature-kpic .kpic-title {
