@@ -4,259 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="icon" href="images/icon.png">
-		<style>
-			:root {
-				--accent: #2f9ed8;
-				--accent-deep: #2578a4;
-				--ink: #20303d;
-			}
-
-			#header nav ul li {
-				margin-left: 1.45em;
-			}
-
-			#header nav ul li:first-child {
-				margin-left: 0;
-			}
-
-			#header nav ul li a.tab-link {
-				border: 1px solid rgba(255, 255, 255, 0.35);
-				border-radius: 999px;
-				font-size: 0.72em;
-				font-weight: 700;
-				letter-spacing: 0.06em;
-				line-height: 1;
-				margin-top: 1.35em;
-				padding: 0.6em 1.2em;
-				transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-			}
-
-			#header nav ul li a.tab-link.active {
-				background-color: var(--accent);
-				border-color: var(--accent);
-				color: #fff;
-			}
-
-			#header:not(.alt) nav ul li a.tab-link {
-				border-color: rgba(47, 158, 216, 0.45);
-				color: var(--accent-deep);
-			}
-
-			#header:not(.alt) nav ul li a.tab-link.active {
-				color: #fff;
-			}
-
-			.tab-panel {
-				display: none;
-			}
-
-			.tab-panel.is-active {
-				animation: tabReveal 0.28s ease-out;
-				display: block;
-			}
-
-			@keyframes tabReveal {
-				from {
-					opacity: 0;
-					transform: translateY(8px);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
-
-			#research .container,
-			#outreach .container,
-			#publications .container {
-				max-width: 84rem;
-				width: 92%;
-			}
-
-			#research header.major.special {
-				margin-left: 0 !important;
-				text-align: left;
-			}
-
-			#research .feature-grid .feature {
-				align-items: flex-start;
-				display: flex;
-				float: none;
-				gap: 2.4rem;
-				margin-bottom: 3.3rem;
-				width: 100%;
-			}
-
-			#research .feature-grid .feature:empty {
-				display: none;
-			}
-
-			#research .feature-grid .feature .content,
-			#research .feature-grid .feature .image {
-				float: none !important;
-				margin-left: 0 !important;
-				margin-right: 0 !important;
-				text-align: left !important;
-				width: auto;
-			}
-
-			#research .feature-grid .feature .image {
-				flex: 0 0 min(46%, 37rem);
-			}
-
-			#research .feature-grid .feature .content {
-				color: var(--ink);
-				flex: 1 1 0;
-				min-width: 0;
-			}
-
-			#research .feature-grid .feature .image img {
-				border-radius: 8px;
-				box-shadow: 0 10px 28px rgba(24, 43, 56, 0.16);
-				height: auto !important;
-				max-width: 100%;
-				width: 100% !important;
-			}
-
-			#research .feature-grid .feature.feature-gliese229 .image {
-				flex-basis: min(52%, 42rem);
-			}
-
-			.hr8799-stack,
-			.kpic-image-stack {
-				display: flex;
-				flex-direction: column;
-				gap: 1rem;
-				width: 100%;
-			}
-
-			#research .feature-grid .feature .hr8799-stack img,
-			#research .feature-grid .feature .kpic-image-stack img {
-				display: block;
-				width: auto !important;
-			}
-
-			#research .feature-grid .feature .hr8799-stack .cs-on-plot {
-				margin: 0 auto;
-				max-width: 92%;
-			}
-
-			#research .feature-grid .feature .hr8799-stack .hr8799-plot {
-				margin: 0 auto;
-				max-width: 100%;
-			}
-
-			#research .feature-grid .feature .kpic-image-stack .kpic-logo {
-				margin: 0 auto;
-				max-width: min(72%, 17rem);
-			}
-
-			#research .feature-grid .feature .kpic-image-stack .kpic-co {
-				margin: 0 auto;
-				max-width: min(82%, 22rem);
-			}
-
-			#research .actions li,
-			#outreach .actions li,
-			#publications .actions li {
-				margin: 0.35rem 0.4rem 0 0;
-			}
-
-			#outreach .major.special p .image.fit img {
-				height: 25rem !important;
-				max-width: 48rem;
-				object-fit: cover;
-				width: min(100%, 70%);
-			}
-
-			.kpic-links {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.55rem;
-				margin-top: 1rem;
-			}
-
-			.kpic-links .button {
-				margin: 0 !important;
-			}
-
-			#publications .pub-summary {
-				color: var(--ink);
-				font-size: 0.95em;
-				margin: 0 auto 2.5rem auto;
-				max-width: 78rem;
-			}
-
-			#publications .pub-summary p {
-				margin-bottom: 0.65rem;
-			}
-
-			#publications .pub-group {
-				margin-bottom: 2.5rem;
-			}
-
-			#publications .pub-group h3 {
-				font-size: 1.2rem;
-				margin-bottom: 0.8rem;
-				text-transform: none;
-			}
-
-			#publications ol {
-				list-style: decimal;
-				margin: 0 0 0 1.5rem;
-				padding: 0;
-			}
-
-			#publications ol li {
-				margin-bottom: 1.1rem;
-				padding-left: 0.35rem;
-			}
-
-			#publications .pub-entry {
-				margin: 0;
-			}
-
-			#publications,
-			#research,
-			#outreach {
-				scroll-margin-top: 5.5rem;
-			}
-
-			@media screen and (max-width: 980px) {
-				#header nav ul li {
-					margin-left: 0.7em;
-				}
-
-				#header nav ul li a.tab-link {
-					font-size: 0.64em;
-					padding: 0.55em 0.85em;
-				}
-
-				#research .feature-grid .feature {
-					flex-direction: column;
-					gap: 1.4rem;
-				}
-
-				#research .feature-grid .feature .image {
-					flex-basis: auto;
-					max-width: 100%;
-					width: 100%;
-				}
-
-				#research header.major.special {
-					text-align: center;
-				}
-
-				#publications .pub-group h3 {
-					text-align: center;
-				}
-
-				#outreach .major.special p .image.fit img {
-					height: 20rem !important;
-					width: min(100%, 95%);
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="assets/css/site-custom.css">
 		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-922QBD04SS&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130484252-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -272,9 +20,9 @@
 			<header id="header" class="alt">
 					<nav id="nav">
 						<ul>
-							<li><a href="#research" class="tab-link active" data-tab-link="research">Research</a></li>
-							<li><a href="#publications" class="tab-link" data-tab-link="publications">Selected Publications</a></li>
-							<li><a href="#outreach" class="tab-link" data-tab-link="outreach">Outreach and Mentoring</a></li>
+							<li><a href="index.html" class="tab-link active">Research</a></li>
+							<li><a href="publications.html" class="tab-link">Selected Publications</a></li>
+							<li><a href="outreach.html" class="tab-link">Outreach and Mentoring</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -329,7 +77,7 @@
 				</section>
 
 		<!-- Three -->
-		<section id="research" class="wrapper style1 tab-panel is-active" data-tab-panel="research">
+		<section id="research" class="wrapper style1">
 			<div class="container">
 				<header class="major special" style="margin-left: 15%;">
 					<h2>Research Highlights</h2>
@@ -462,9 +210,9 @@
 							<div class="content">
 								<header>
 									<h4>The origins of hot Jupiters in stellar binary systems</h4>
+									<p>In collaboration with Marvin Morgan.</p>
 								</header>
 								<p>I've launched a campaign to refine the orbital eccentricities and inclinations of stellar companions to hot Jupiters. This survey will reveal whether the orbital properties of stellar companions contribute to hot Jupiter formation. My team was awarded two Keck nights in 2026 to initiate the survey.</p>
-								<p>In collaboration with Marvin Morgan.</p>
 							</div>
 						</div>
 	
@@ -485,7 +233,7 @@
 						</div>
 					</div>
 					
-					<div class="feature">
+					<div class="feature feature-imut">
 						<div class="image"><img src="images/Imut.png" alt="" width=500px height=auto></div>
 						<div class="content">
 							<header>
@@ -501,7 +249,7 @@
 						</div>
 					</div>
 					
-					<div class="feature">
+					<div class="feature feature-nirc2">
 						<div class="image"><img src="images/nirc2_contrast.png" alt="" width=500px height=auto></div>
 						<div class="content">
 							<header>
@@ -520,79 +268,11 @@
 				</div>
 			</section>
 					<!-- Four -->
-						<section id="publications" class="wrapper style1 tab-panel" data-tab-panel="publications">
-							<div class="container">
-								<header class="major special">
-									<h2>Selected Publications</h2>
-								</header>
-								<div class="pub-summary">
-									<p><b>Refereed Journal Articles:</b> 63 total. <b>First-author:</b> 11. <b>Second-author:</b> 9. <b>Third-author:</b> 10.</p>
-									<p><b>Student-led papers:</b> 4. <b>Total citations:</b> 1,174. <b>h-index:</b> 23.</p>
-								</div>
 
-								<div class="pub-group">
-									<h3>First-author Papers</h3>
-									<ol>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Ruffio, J.-B., Chachan, Y., Ohno, K., et al. (2026) <a href="https://arxiv.org/abs/2602.09422">The compositions of the HR 8799 planets reflect accretion of both solids and metal-enriched gas</a>. ApJ, accepted.</p></li>
-										<li><p class="pub-entry">Ruffio, J.-B., <b>Xuan, J.W.</b>, Chachan, Y., Kesseli, A., et al. (2026) <a href="https://doi.org/10.1038/s41550-026-02783-z">Jupiter-like uniform metal enrichment in a system of multiple giant exoplanets</a>. Nature Astronomy.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, M&eacute;rand, A., Thompson, W., et al. (2024) <a href="https://www.nature.com/articles/s41586-024-08064-x">The cool brown dwarf Gliese 229 B is a close binary</a>. Nature, 634, 1070-1074.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Perrin, M., Mawet, D., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...977L..32X/abstract">Atmospheric abundances and bulk properties of the binary brown dwarf Gliese 229 Bab from JWST/MIRI spectroscopy</a>. ApJL, 977, L32.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Hsu, D., Finnerty, L., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...71X/abstract">Are these planets or brown dwarfs? Broadly solar compositions from high-resolution atmospheric retrievals of 10-30 MJup companions</a>. ApJ, 970, 71.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Wang, J., Finnerty, L., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...962...10X/abstract">Validation of elemental and isotopic abundances in late-M spectral types with the benchmark HIP 55507 AB system</a>. ApJ, 962, 10.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Wang, J., Ruffio, J.-B., et al. (2022) <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...937...54X/abstract">A Clear View of a Cloudy Brown Dwarf Companion from High-resolution Spectroscopy</a>. ApJ, 937, 54.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b> and Wyatt, M.C. (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.2096X/abstract">Evidence for a high mutual inclination between the cold Jupiter and transiting super Earth orbiting pi Men</a>. MNRAS, 497, 2096.</p></li>
-										<li><p class="pub-entry"><b>Xuan, J.W.</b>, Kennedy, G.M., Wyatt, M.C., Yelverton, B. (2020) <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.499.5059X/abstract">Mutual inclinations between giant planets and their debris discs in HD 113337 and HD 38529</a>. MNRAS, 499, 5059.</p></li>
-									</ol>
-								</div>
-
-								<div class="pub-group">
-									<h3>Student-led Papers</h3>
-									<ol>
-										<li><p class="pub-entry">Wang, G., <b>Xuan, J.W.</b>, Gonz&aacute;lez Picos, D., Zhang, Z., et al. (2026) <a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...997..195W/abstract">Chemical and Isotopic Homogeneity between the L Dwarf CD-35 2722 B and Its Early M Host Star</a>. ApJ, 997, 195.</p></li>
-										<li><p class="pub-entry">Sanghi, A., Thompson, W., Mang, J., <b>Xuan, J.W.</b>, et al. (2026) <a href="https://ui.adsabs.harvard.edu/search/q=title%3A%22Worlds%20Next%20Door.%20IV.%20Mapping%20the%20Late%20Stages%20of%20Giant%20Planet%20Evolution%20with%20a%20Precise%20Dynamical%20Mass%20and%20Luminosity%20for%20eps%20Ind%20Ab%22">Worlds Next Door. IV. Mapping the Late Stages of Giant Planet Evolution with a Precise Dynamical Mass and Luminosity for eps Ind Ab</a>. ApJ, submitted.</p></li>
-										<li><p class="pub-entry">Sanghi, A., <b>Xuan, J.W.</b>, Wang, J.J., Mawet, D., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..215S/abstract">Efficiently Searching for Close-in Companions Around Young M Dwarfs Using a Multiyear PSF Library</a>. AJ, 168, 215.</p></li>
-									</ol>
-								</div>
-
-								<div class="pub-group">
-									<h3>Second/Third-author Papers</h3>
-									<ol>
-										<li><p class="pub-entry">Thompson, W., Blakely, D., <b>Xuan, J.W.</b>, Blouin, S., et al. (2026) <a href="https://arxiv.org/abs/2602.00235">Detecting and Characterizing Companions with a Calibrated Gaia DR2, DR3, and Hipparcos Catalog (G23H)</a>. AJ, submitted.</p></li>
-										<li><p class="pub-entry">Finnerty, L., Fitzgerald, M.P., <b>Xuan, J.W.</b>, Echeverri, D., et al. (2026) <a href="https://arxiv.org/abs/2602.17777">Possible stratospheric emission in the warm Neptune GJ 436 b from high-resolution spectroscopy</a>. AJ, accepted.</p></li>
-										<li><p class="pub-entry">Hsu, C.-C., Wang, J.J., <b>Xuan, J.W.</b>, Zhang, Y., et al. (2026) <a href="https://arxiv.org/abs/2601.05976">Distinct Rotational Evolution of Giant Planets and Brown Dwarf Companions</a>. AJ, accepted.</p></li>
-										<li><p class="pub-entry">Zhang, Y., <b>Xuan, J.W.</b>, Mawet, D., Wang, J.J., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..131Z/abstract">Atmospheric Characterization of the Super-Jupiter HIP 99770 b with KPIC</a>. AJ, 168, 131.</p></li>
-										<li><p class="pub-entry">Hejazi, N., <b>Xuan, J.W.</b>, Coria, D.R., Sawczynec, E., et al. (2025) <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...978...42H/abstract">Chemical Links between a Young M-type T Tauri Star and Its Substellar Companion: Spectral Analysis and C/O Measurement of DH Tau A</a>. ApJ, 978, 42.</p></li>
-										<li><p class="pub-entry">Costes, J.C., <b>Xuan, J.W.</b>, Vigan, A., Wang, J., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...686A.294C/abstract">Fresh view of the hot brown dwarf HD 984 B through high-resolution spectroscopy</a>. A&amp;A, 686, A294.</p></li>
-										<li><p class="pub-entry">Echeverri, D., <b>Xuan, J.W.</b>, Monnier, J.D., Delorme, J.-R., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965L..15E/abstract">Vortex Fiber Nulling for Exoplanet Observations: First Direct Detection of M Dwarf Companions around HIP 21543, HIP 94666, and HIP 50319</a>. ApJL, 965, L15.</p></li>
-										<li><p class="pub-entry">Inglis, J., Wallack, N.L., <b>Xuan, J.W.</b>, Knutson, H.A., et al. (2024) <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167..218I/abstract">Atmospheric Retrievals of the Young Giant Planet ROXs 42B b from Low- and High-resolution Spectroscopy</a>. AJ, 167, 218.</p></li>
-									</ol>
-								</div>
-
-								<ul class="actions">
-									<li><a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A%220000-0002-6618-1137&sort=date%20desc%2C%20bibcode%20desc" class="button special">Full Publications (ADS)</a></li>
-								</ul>
-							</div>
-						</section>
 
 
 		<!-- Three -->
-            <section id="outreach" class="wrapper style1 tab-panel" data-tab-panel="outreach">
-               <div class="container">
-                  <header class="major special" style="text-align: center;">
-                     <h2>Outreach and Mentoring</h2>
-			<p><span class="image fit"><img src="images/ssp1.png" alt="" style="overflow:hidden; width:40%; height:400px; object-fit:cover; display:block; margin: 0 auto;"></span></p>
-                  </header>
-                  <div style="max-width:1200px; display:block; margin: 0 auto;">
-                     <p>In 2019, I worked for 6 weeks as Teaching and Residential Assistant for the Summer Science Program, where I am alumnus (2014). In the Astrophysics camp, I taught 36 students an intensive research project on asteroid orbital determination, and helped students with telescope observations and data reduction.</p>
-                     <p>During college and at Caltech, I worked as TA for several physics and astronomy classes, including Observational Astrophysics, Intro to Astronomy, Advanced Intro Physics, Bayesian Statistics, and High Energy Astrophysics.</p>
-		     <p>At Caltech and UCLA, I have advised several undergraduate and graduate students, including Aniket Sanghi (now graduate student). Aniket's paper on advancing reference star differential imaging was published in <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..215S/abstract">AJ</a>. I've also been advising Gavin Wang (JHU) on high-resolution atmospheric retrievals. Gavin's paper using Keck/KPIC to detect 13CO was accepted to <a href="https://arxiv.org/abs/2511.19588">ApJ</a></p>
-		     <p>Since 2025, I have been advising Sage Santomenna (Pomona College) on searching for new brown dwarf binaries orbiting stars using VLT/CRIRES+ spectroscopy.</p>
 
-					  <p>I helped an undergraduate student from UIUC apply for graduate school as part of the Caltech Accountability Partners Program, Future Ignited. I also helped an graduate student from Dartmouth apply for postdoctoral fellowships as part of the AMP-UP Program.</p>
-
-                  </div>
-               </div>
-            </section>
 
 		
 
@@ -612,61 +292,6 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-				<script>
-					(function () {
-						var validTabs = ['research', 'publications', 'outreach'];
-
-						function resolveTabFromHash() {
-							var hash = window.location.hash.replace('#', '').toLowerCase();
-							if (validTabs.indexOf(hash) !== -1) {
-								return hash;
-							}
-							return 'research';
-						}
-
-						function setTab(tabName, shouldUpdateHash) {
-							var safeTab = validTabs.indexOf(tabName) !== -1 ? tabName : 'research';
-
-						document.querySelectorAll('[data-tab-panel]').forEach(function (panel) {
-							var isActive = panel.getAttribute('data-tab-panel') === safeTab;
-							panel.classList.toggle('is-active', isActive);
-							panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
-						});
-
-						document.querySelectorAll('[data-tab-link]').forEach(function (link) {
-							var isActive = link.getAttribute('data-tab-link') === safeTab;
-							link.classList.toggle('active', isActive);
-							link.setAttribute('aria-current', isActive ? 'page' : 'false');
-						});
-
-						if (shouldUpdateHash) {
-							history.replaceState(null, '', '#' + safeTab);
-						}
-					}
-
-					document.addEventListener('click', function (event) {
-						var link = event.target.closest('a[data-tab-link]');
-						if (!link) {
-							return;
-						}
-
-						event.preventDefault();
-						var targetTab = link.getAttribute('data-tab-link');
-						setTab(targetTab, true);
-
-						var panel = document.querySelector('[data-tab-panel="' + targetTab + '"]');
-						if (panel) {
-							panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-						}
-					});
-
-					window.addEventListener('hashchange', function () {
-						setTab(resolveTabFromHash(), false);
-					});
-
-					setTab(resolveTabFromHash(), false);
-				})();
-			</script>
 
 	
 </body></html>
