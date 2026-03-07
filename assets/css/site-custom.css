@@ -75,7 +75,7 @@
 
 #about .about-text p {
 	color: var(--ink);
-	font-size: 1.13rem;
+	font-size: 1.24rem;
 	line-height: 1.78;
 	margin: 0 0 0.95rem 0;
 }
@@ -92,7 +92,7 @@
 
 #about .education-section h3 {
 	color: #173348;
-	font-size: 1.52rem;
+	font-size: 1.68rem;
 	font-weight: 700;
 	letter-spacing: 0.01em;
 	margin: 0 0 0.7rem 0;
@@ -112,7 +112,7 @@
 
 #about .education-line {
 	color: #2a3f52;
-	font-size: 1.08rem;
+	font-size: 1.2rem;
 	line-height: 1.62;
 	margin: 0;
 }
@@ -286,8 +286,6 @@
 
 #research .feature-grid .feature.feature-jwst-frontier .cs-on-plot {
 	margin: 0.15rem auto 0 auto;
-	max-width: 100%;
-	width: 100% !important;
 }
 
 #research .feature-grid .feature.feature-jwst-frontier .hr8799-cartoon-plot {
@@ -637,7 +635,7 @@
 	}
 
 	#about .education-line {
-		font-size: 1rem;
+		font-size: 1.08rem;
 	}
 
 	#outreach .major.special p .image.fit img {
