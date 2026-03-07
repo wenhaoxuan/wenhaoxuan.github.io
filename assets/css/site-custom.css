@@ -4,6 +4,8 @@
 	--ink: #20303d;
 	--subhead: #536172;
 	--research-block-width: 74rem;
+	--body-copy-size: 1.16rem;
+	--small-copy-size: 1.08rem;
 }
 
 #header nav ul li {
@@ -157,9 +159,15 @@
 
 #media .media-meta {
 	color: var(--subhead);
-	font-size: 1rem;
+	font-size: var(--small-copy-size);
 	font-weight: 600;
 	margin: 0.15rem 0 0 0;
+}
+
+#research .feature-grid .feature .content p,
+#outreach .container > div > p {
+	font-size: var(--body-copy-size);
+	line-height: 1.78;
 }
 
 #media .media-meta span {
@@ -316,6 +324,7 @@
 
 #research .feature-grid .feature.feature-jwst-frontier .jwst-subsection .subsection-note {
 	color: var(--subhead);
+	font-size: var(--small-copy-size);
 	font-weight: 600;
 	margin-bottom: 0.6rem;
 }
@@ -453,7 +462,7 @@
 #outreach .mentor-head {
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 1.02rem;
+	font-size: var(--small-copy-size);
 	gap: 0.5rem;
 	justify-content: space-between;
 	margin: 0 0 0.12rem 0;
@@ -466,6 +475,7 @@
 
 #outreach .mentor-project {
 	color: #3c4f5f;
+	font-size: var(--small-copy-size);
 	margin: 0;
 }
 
@@ -546,7 +556,7 @@
 
 #publications .pub-entry {
 	color: #243746;
-	font-size: 1.12rem;
+	font-size: 1.16rem;
 	line-height: 1.68;
 	margin: 0;
 }
@@ -567,7 +577,7 @@
 }
 
 #publications .pub-full-link {
-	font-size: 1.12rem;
+	font-size: 1.16rem;
 	font-weight: 700;
 	margin: 0.35rem 0 0 0;
 }
@@ -623,19 +633,24 @@
 	}
 
 	#publications .pub-stats-line {
-		font-size: 1.05rem;
+		font-size: 1.09rem;
 	}
 
 	#publications .pub-entry {
-		font-size: 1rem;
+		font-size: 1.06rem;
 	}
 
 	#media .media-title {
-		font-size: 1.08rem;
+		font-size: 1.12rem;
 	}
 
 	#about .education-line {
 		font-size: 1.08rem;
+	}
+
+	#research .feature-grid .feature .content p,
+	#outreach .container > div > p {
+		font-size: 1.07rem;
 	}
 
 	#outreach .major.special p .image.fit img {
