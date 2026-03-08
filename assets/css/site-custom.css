@@ -95,6 +95,7 @@
 
 #research .container,
 #publications .container,
+#observing .container,
 #outreach .container,
 #about .container,
 #media .container {
@@ -105,6 +106,7 @@
 #about header.major.special,
 #research header.major.special,
 #publications header.major.special,
+#observing header.major.special,
 #outreach header.major.special,
 #media header.major.special {
 	margin: 0 auto 1.15rem auto;
@@ -116,6 +118,7 @@
 #about header.major.special h2,
 #research header.major.special h2,
 #publications header.major.special h2,
+#observing header.major.special h2,
 #outreach header.major.special h2,
 #media header.major.special h2 {
 	color: #1f3345;
@@ -128,6 +131,7 @@
 }
 
 #about .about-profile,
+#observing .observing-card-grid,
 #media .media-list,
 #publications .pub-summary,
 #publications .pub-group,
@@ -159,6 +163,16 @@
 	font-size: 1.24rem;
 	line-height: 1.78;
 	margin: 0 0 0.95rem 0;
+}
+
+#about .about-text .research-identity-line {
+	border-left: 3px solid rgba(47, 158, 216, 0.42);
+	color: #1f4157;
+	font-size: 1.28rem;
+	font-weight: 600;
+	line-height: 1.72;
+	margin-bottom: 1rem;
+	padding-left: 0.8rem;
 }
 
 #about .about-text p:last-child {
@@ -253,6 +267,77 @@
 	margin-left: 0.55rem;
 }
 
+#outreach header.major.special h2 + p,
+#media header.major.special h2 + p,
+#observing header.major.special h2 + p {
+	margin-top: 0.65rem;
+}
+
+#outreach header.major.special p {
+	margin: 0.75rem 0 0 0;
+	position: static;
+}
+
+#media header.major.special p,
+#observing header.major.special p {
+	color: var(--subhead);
+	font-size: 1.12rem;
+	line-height: 1.6;
+	margin: 0.65rem 0 0 0;
+	position: static;
+}
+
+#observing .observing-card-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#observing .observing-card {
+	background: #f8fbff;
+	border: 1px solid rgba(33, 58, 79, 0.14);
+	border-radius: 0.85rem;
+	padding: 0.9rem 1rem 0.95rem 1rem;
+}
+
+#observing .observing-card:first-child {
+	grid-column: 1 / -1;
+}
+
+#observing .observing-card h3 {
+	color: #1d4d70;
+	font-size: 1.34rem;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	line-height: 1.3;
+	margin: 0 0 0.45rem 0;
+	text-transform: none;
+}
+
+#observing .observing-card .observing-card-note {
+	color: var(--subhead);
+	font-size: 1.03rem;
+	font-weight: 600;
+	line-height: 1.52;
+	margin: 0 0 0.45rem 0;
+}
+
+#observing .observing-card ul {
+	margin: 0;
+	padding-left: 1.2rem;
+}
+
+#observing .observing-card li {
+	color: #2a3e50;
+	font-size: 1.04rem;
+	line-height: 1.5;
+	margin-bottom: 0.3rem;
+}
+
+#observing .observing-card li:last-child {
+	margin-bottom: 0;
+}
+
 #research .feature-grid {
 	position: relative;
 }
@@ -261,48 +346,6 @@
 	clear: both;
 	content: '';
 	display: block;
-}
-
-#research .observing-programs {
-	background: #f7fbff;
-	border: 1px solid rgba(33, 58, 79, 0.14);
-	border-left: 4px solid var(--accent);
-	border-radius: 0.85rem;
-	margin: 0 auto 1.35rem auto;
-	max-width: min(100%, var(--research-block-width));
-	padding: 0.85rem 1.05rem 0.9rem 1.05rem;
-}
-
-#research .observing-programs h3 {
-	color: #1d4d70;
-	font-size: 1.34rem;
-	font-weight: 700;
-	letter-spacing: 0.01em;
-	line-height: 1.3;
-	margin: 0;
-	text-transform: none;
-}
-
-#research .observing-programs .observing-note {
-	color: var(--subhead);
-	font-size: 1.02rem;
-	font-weight: 600;
-	line-height: 1.5;
-	margin: 0.25rem 0 0.55rem 0;
-}
-
-#research .observing-programs .observing-grid {
-	column-gap: 1rem;
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	row-gap: 0.55rem;
-}
-
-#research .observing-programs .observing-grid p {
-	color: #2a3e50;
-	font-size: 1.01rem;
-	line-height: 1.5;
-	margin: 0;
 }
 
 #research .feature-grid .feature {
@@ -646,8 +689,10 @@
 	margin: 0.35rem 0.4rem 0 0;
 }
 
-#outreach .major.special p .image.fit img {
+#outreach .major.special p .image.fit .outreach-hero-image {
 	height: 25rem !important;
+	display: block;
+	margin: 0 auto;
 	max-width: 48rem;
 	object-fit: cover;
 	width: min(100%, 70%);
@@ -846,9 +891,14 @@
 	#about header.major.special h2,
 	#research header.major.special h2,
 	#publications header.major.special h2,
+	#observing header.major.special h2,
 	#outreach header.major.special h2,
 	#media header.major.special h2 {
 		font-size: 1.95rem;
+	}
+
+	#observing .observing-card-grid {
+		grid-template-columns: minmax(0, 1fr);
 	}
 
 	#research .feature-grid .feature.feature-jwst-frontier .hr8799-main-figure {
@@ -881,10 +931,6 @@
 		height: 3rem !important;
 	}
 
-	#research .observing-programs .observing-grid {
-		grid-template-columns: minmax(0, 1fr);
-	}
-
 	#publications .pub-stats-line {
 		font-size: 1.09rem;
 	}
@@ -906,7 +952,7 @@
 		font-size: 1.07rem;
 	}
 
-	#outreach .major.special p .image.fit img {
+	#outreach .major.special p .image.fit .outreach-hero-image {
 		height: 20rem !important;
 		width: min(100%, 95%);
 	}
