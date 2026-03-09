@@ -85,6 +85,11 @@
 	color: #f0f7ff;
 }
 
+#banner {
+	background-position: center top;
+	background-size: 100% auto;
+}
+
 #navPanel ul li a.tab-link.active,
 #navPanel ul li a.tab-link[aria-current="page"] {
 	background: rgba(47, 158, 216, 0.24);
@@ -875,6 +880,11 @@
 	.navPanelToggle {
 		position: fixed;
 		top: 0.35rem;
+	}
+
+	#banner {
+		background-position: center;
+		background-size: cover;
 	}
 
 	#header nav ul li {
