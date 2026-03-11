@@ -648,7 +648,20 @@
 }
 
 #research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure.epsindi-detection-figure {
-	max-width: min(100%, 56rem);
+	max-width: min(100%, 70rem);
+	position: relative;
+}
+
+#research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure.epsindi-detection-figure .figure-credit {
+	background: rgba(255, 255, 255, 0.82);
+	border-radius: 0.3rem;
+	bottom: 0.65rem;
+	color: #1f2f3d;
+	font-size: 0.78rem;
+	font-weight: 600;
+	padding: 0.2rem 0.45rem;
+	position: absolute;
+	right: 0.7rem;
 }
 
 #research .feature-grid .feature.feature-kpic .image,
