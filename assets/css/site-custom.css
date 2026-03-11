@@ -647,6 +647,10 @@
 	max-width: min(100%, 38.75rem);
 }
 
+#research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure.epsindi-detection-figure {
+	max-width: min(100%, 56rem);
+}
+
 #research .feature-grid .feature.feature-kpic .image,
 #research .feature-grid .feature.feature-kpic .content {
 	max-width: min(100%, 74rem);
