@@ -323,7 +323,6 @@
 }
 
 #observing .observing-card-grid {
-	counter-reset: observing-card;
 	display: grid;
 	gap: 1.15rem;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -356,17 +355,6 @@
 
 #observing .observing-card:nth-child(3)::after {
 	background: linear-gradient(90deg, #7b5aa3, #ad8acb);
-}
-
-#observing .observing-card::before {
-	color: rgba(30, 61, 84, 0.16);
-	content: '0' counter(observing-card);
-	counter-increment: observing-card;
-	font-size: 1.46rem;
-	font-weight: 800;
-	position: absolute;
-	right: 0.95rem;
-	top: 0.58rem;
 }
 
 #observing .observing-card:hover {
