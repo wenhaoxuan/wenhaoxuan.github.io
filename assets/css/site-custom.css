@@ -1645,22 +1645,20 @@ input[type="reset"] {
 /* Hero artwork using the Gliese 229 Ba/Bb artist impression. */
 #banner {
 	align-items: flex-start;
-	background:
-		radial-gradient(circle at 76% 52%, rgba(48, 82, 110, 0.34) 0%, rgba(7, 13, 20, 0.34) 34%, rgba(5, 11, 17, 0.96) 78%),
-		linear-gradient(135deg, #060b12 0%, #111827 48%, #132234 100%);
+	background: #050b11;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: clamp(22rem, 34vw, 28rem);
+	min-height: clamp(21rem, 32vw, 26rem);
 	overflow: hidden;
 	padding: clamp(7.3rem, 8vw, 8.4rem) clamp(2rem, 7vw, 7.5rem) clamp(3.6rem, 5vw, 4.8rem);
 	text-align: left;
 }
 
 #banner::before {
-	background:
-		linear-gradient(90deg, rgba(5, 11, 17, 0.96) 0%, rgba(5, 11, 17, 0.78) 38%, rgba(5, 11, 17, 0.28) 70%, rgba(5, 11, 17, 0.08) 100%),
-		linear-gradient(180deg, rgba(5, 11, 17, 0.12), rgba(5, 11, 17, 0.58));
+	background: linear-gradient(90deg, #050b11 0%, rgba(5, 11, 17, 0.98) 68%, rgba(5, 11, 17, 0) 100%);
+	right: auto;
+	width: min(54rem, 58%);
 	z-index: 1;
 }
 
@@ -1668,13 +1666,14 @@ input[type="reset"] {
 	background-image: url("../../images/BinaryBrownDwarf_1080.png");
 	background-position: right center;
 	background-repeat: no-repeat;
-	background-size: auto min(96%, 28rem);
+	background-size: contain;
+	bottom: clamp(0.5rem, 1.2vw, 1rem);
 	content: '';
-	inset: 0;
-	-webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.28) 14%, #000 30%, #000 100%);
-	mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.28) 14%, #000 30%, #000 100%);
+	left: min(26rem, 31vw);
 	opacity: 1;
 	position: absolute;
+	right: clamp(0.75rem, 2vw, 1.5rem);
+	top: clamp(4.9rem, 6vw, 5.5rem);
 	z-index: 0;
 }
 
@@ -1684,15 +1683,34 @@ input[type="reset"] {
 
 #banner h2 {
 	font-family: 'Manrope', 'Source Sans 3', Helvetica, sans-serif;
+	font-size: clamp(2.9rem, 5.6vw, 5.45rem);
 	font-weight: 800;
-	letter-spacing: -0.055em;
+	letter-spacing: -0.045em;
 	max-width: 12ch;
 	text-shadow: 0 0.35rem 1.1rem rgba(0, 0, 0, 0.58);
+	word-spacing: 0.08em;
+}
+
+#banner p {
+	font-size: clamp(1.48rem, 2.1vw, 1.85rem);
+	font-weight: 700;
 }
 
 #banner p,
 #banner .actions {
 	justify-content: flex-start;
+}
+
+#banner .actions {
+	gap: 0.85rem;
+}
+
+#banner .button.small {
+	font-size: 0.92rem;
+	letter-spacing: 0.09em;
+	min-width: 5.4rem;
+	padding-left: 1.3rem;
+	padding-right: 1.3rem;
 }
 
 #header.alt::before {
@@ -1710,17 +1728,19 @@ input[type="reset"] {
 	}
 
 	#banner::before {
-		background:
-			linear-gradient(180deg, rgba(5, 11, 17, 0.38), rgba(5, 11, 17, 0.72)),
-			radial-gradient(circle at 50% 58%, rgba(5, 11, 17, 0.18) 0%, rgba(5, 11, 17, 0.82) 74%);
+		background: linear-gradient(180deg, rgba(5, 11, 17, 0.9) 0%, rgba(5, 11, 17, 0.7) 48%, rgba(5, 11, 17, 0.08) 100%);
+		inset: 0;
+		width: auto;
 	}
 
 	#banner::after {
 		background-position: center bottom;
-		background-size: auto 68%;
-		-webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 24%, #000 100%);
-		mask-image: linear-gradient(180deg, transparent 0%, #000 24%, #000 100%);
-		opacity: 0.64;
+		background-size: contain;
+		bottom: 0.75rem;
+		left: 0.75rem;
+		opacity: 0.82;
+		right: 0.75rem;
+		top: 6.2rem;
 	}
 
 	#banner .actions {
