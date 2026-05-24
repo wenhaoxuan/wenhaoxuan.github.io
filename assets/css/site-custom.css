@@ -1666,7 +1666,7 @@ input[type="reset"] {
 	background-image: url("../../images/BinaryBrownDwarf_1080.png");
 	background-position: right center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 112% 100%;
 	bottom: clamp(0.5rem, 1.2vw, 1rem);
 	content: '';
 	left: min(26rem, 31vw);
@@ -1735,7 +1735,7 @@ input[type="reset"] {
 
 	#banner::after {
 		background-position: center bottom;
-		background-size: contain;
+		background-size: 112% auto;
 		bottom: 0.75rem;
 		left: 0.75rem;
 		opacity: 0.82;
