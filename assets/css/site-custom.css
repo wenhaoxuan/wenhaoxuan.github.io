@@ -1661,7 +1661,7 @@ input[type="reset"] {
 	justify-content: center;
 	min-height: clamp(21rem, 32vw, 26rem);
 	overflow: hidden;
-	padding: clamp(7.3rem, 8vw, 8.4rem) clamp(2rem, 7vw, 7.5rem) clamp(3.6rem, 5vw, 4.8rem);
+	padding: clamp(7.3rem, 8vw, 8.4rem) clamp(2rem, 7vw, 7.5rem) clamp(3.6rem, 5vw, 4.8rem) clamp(3rem, 8.6vw, 8.8rem);
 	text-align: left;
 }
 
@@ -1676,7 +1676,7 @@ input[type="reset"] {
 	background-image: url("../../images/BinaryBrownDwarf_1080.png");
 	background-position: right center;
 	background-repeat: no-repeat;
-	background-size: 112% 100%;
+	background-size: auto 100%;
 	bottom: clamp(0.5rem, 1.2vw, 1rem);
 	content: '';
 	left: min(26rem, 31vw);
@@ -1684,6 +1684,8 @@ input[type="reset"] {
 	position: absolute;
 	right: clamp(0.75rem, 2vw, 1.5rem);
 	top: clamp(4.9rem, 6vw, 5.5rem);
+	transform: scaleX(1.12);
+	transform-origin: right center;
 	z-index: 0;
 }
 
@@ -1745,12 +1747,14 @@ input[type="reset"] {
 
 	#banner::after {
 		background-position: center bottom;
-		background-size: 112% auto;
+		background-size: auto 68%;
 		bottom: 0.75rem;
 		left: 0.75rem;
 		opacity: 0.82;
 		right: 0.75rem;
 		top: 6.2rem;
+		transform: scaleX(1.12);
+		transform-origin: center bottom;
 	}
 
 	#banner .actions {
