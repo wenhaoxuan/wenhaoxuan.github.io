@@ -1315,13 +1315,14 @@ input[type="reset"] {
 #about .about-profile {
 	display: grid;
 	gap: 2.2rem 2.5rem;
-	grid-template-columns: minmax(16rem, 0.82fr) minmax(0, 1.18fr);
+	grid-template-columns: minmax(11rem, 18rem) minmax(0, 1fr);
 }
 
 #about .about-photo {
 	grid-row: span 2;
+	justify-self: center;
 	margin: 0;
-	max-width: none;
+	max-width: 18rem;
 	position: sticky;
 	top: 5.7rem;
 }
@@ -1581,7 +1582,7 @@ input[type="reset"] {
 
 	#about .about-photo {
 		margin: 0 auto 1.25rem auto;
-		max-width: min(100%, 32rem);
+		max-width: min(100%, 16rem);
 		position: static;
 	}
 
