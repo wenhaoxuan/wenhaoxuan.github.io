@@ -1577,7 +1577,7 @@ input[type="reset"] {
 	}
 
 	#about .about-profile {
-		display: block;
+		display: block !important;
 	}
 
 	#about .about-photo {
@@ -1760,5 +1760,72 @@ input[type="reset"] {
 
 	#banner .actions {
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#header,
+	#header.alt {
+		background: rgba(11, 18, 24, 0.88);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+		box-shadow: 0 0.45rem 1.3rem rgba(0, 0, 0, 0.24);
+		display: block;
+		height: auto;
+		left: 0;
+		line-height: 1;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10002;
+	}
+
+	#header.alt::before {
+		display: none;
+	}
+
+	#header nav,
+	#header.alt nav {
+		height: auto;
+		line-height: 1;
+		overflow-x: auto;
+		position: static;
+		right: auto;
+		scrollbar-width: none;
+		top: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	#header nav::-webkit-scrollbar,
+	#header.alt nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	#header nav ul {
+		display: flex;
+		gap: 0.48rem;
+		margin: 0;
+		min-width: max-content;
+		padding: 0.64rem 0.85rem;
+	}
+
+	#header nav ul li,
+	#header nav ul li:first-child {
+		display: block;
+		flex: 0 0 auto;
+		margin-left: 0;
+	}
+
+	#header nav ul li a.tab-link {
+		border-color: rgba(255, 255, 255, 0.34);
+		font-size: 0.64rem;
+		line-height: 1;
+		margin-top: 0;
+		padding: 0.7rem 0.78rem;
+		white-space: nowrap;
+	}
+
+	.navPanelToggle {
+		display: none !important;
 	}
 }

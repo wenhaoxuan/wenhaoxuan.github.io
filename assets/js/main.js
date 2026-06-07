@@ -67,6 +67,28 @@
 					$('#navPanel')
 						.css('transition', 'none');
 
+			// Keep the active tab visible in the scrollable mobile navigation.
+				var $activeNavTab = $('#nav .tab-link.active');
+
+				if ($activeNavTab.length && window.matchMedia) {
+					var showActiveNavTab = function() {
+						if (!window.matchMedia('(max-width: 980px)').matches)
+							return;
+
+						try {
+							$activeNavTab[0].scrollIntoView({
+								block: 'nearest',
+								inline: 'center'
+							});
+						}
+						catch (e) {
+							$activeNavTab[0].scrollIntoView(false);
+						}
+					};
+
+					showActiveNavTab();
+					$window.on('resize orientationchange', showActiveNavTab);
+				}
 
 	});
 
