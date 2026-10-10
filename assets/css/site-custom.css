@@ -1456,6 +1456,7 @@ input[type="reset"] {
 
 #research .feature-grid .feature .image img,
 #research .feature-grid .feature .section-figure img,
+#research .feature-grid .feature.feature-jwst-frontier .jwst-hr8799-figures img,
 #research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure img {
 	border: 1px solid rgba(21, 36, 49, 0.12);
 	box-shadow: 0 0.45rem 1.2rem rgba(24, 42, 55, 0.07);
