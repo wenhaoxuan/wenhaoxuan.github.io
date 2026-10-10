@@ -661,7 +661,8 @@
 }
 
 #research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure.wispit2-figure {
-	max-width: min(100%, 25rem);
+	max-width: 20rem;
+	width: 82%;
 }
 
 #research .feature-grid .feature.feature-jwst-frontier .wispit2-figure .figure-credit {
