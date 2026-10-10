@@ -624,6 +624,12 @@
 	margin-bottom: 0.6rem;
 }
 
+#research .feature-grid .feature.feature-jwst-frontier .jwst-subsection .program-leadership {
+	font-size: 1.14rem;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
 #research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure {
 	margin: 0.25rem 0 0.85rem 0;
 	max-width: min(100%, 31rem);
