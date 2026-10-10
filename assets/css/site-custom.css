@@ -660,6 +660,24 @@
 	right: 0.7rem;
 }
 
+#research .feature-grid .feature.feature-jwst-frontier .jwst-subsection-figure.wispit2-figure {
+	max-width: min(100%, 25rem);
+}
+
+#research .feature-grid .feature.feature-jwst-frontier .wispit2-figure .figure-credit {
+	color: #516271;
+	display: block;
+	font-size: 0.82rem;
+	font-weight: 600;
+	line-height: 1.4;
+	margin-top: 0.35rem;
+	text-align: right;
+}
+
+#research .feature-grid .feature.feature-jwst-frontier .wispit2-figure .figure-credit a {
+	color: inherit;
+}
+
 #research .feature-grid .feature.feature-kpic .image,
 #research .feature-grid .feature.feature-kpic .content {
 	max-width: min(100%, 74rem);
