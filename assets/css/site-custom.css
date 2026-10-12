@@ -1876,6 +1876,7 @@ input[type="reset"] {
 	--site-ink: #17232d;
 	--site-line: #dbe1e5;
 	--site-muted: #586671;
+	--research-column-gap: clamp(1.25rem, 1.8vw, 1.5rem);
 	--site-soft: #f3f6f7;
 }
 
@@ -2503,7 +2504,7 @@ a {
 	#research .feature:not(.feature-jwst-frontier):not(.feature-gaia):not(.feature-hot-jupiter) .content {
 		display: grid;
 		grid-template-columns: minmax(19rem, 0.75fr) minmax(31rem, 1.25fr);
-		column-gap: clamp(2.5rem, 4.2vw, 4.8rem);
+		column-gap: var(--research-column-gap);
 	}
 
 	#research .feature:not(.feature-jwst-frontier):not(.feature-gaia):not(.feature-hot-jupiter) .content > header {
@@ -2514,6 +2515,7 @@ a {
 		align-self: start;
 		grid-column: 1;
 		grid-row: 2 / span 20;
+		justify-self: end;
 	}
 
 	#research .feature:not(.feature-jwst-frontier):not(.feature-gaia):not(.feature-hot-jupiter) .content > .key-results,
@@ -2534,7 +2536,7 @@ a {
 	#research .jwst-subsection {
 		display: grid;
 		grid-template-columns: minmax(19rem, 0.75fr) minmax(31rem, 1.25fr);
-		column-gap: clamp(2.5rem, 4.2vw, 4.8rem);
+		column-gap: var(--research-column-gap);
 	}
 
 	#research .jwst-subsection > h5 {
@@ -2545,6 +2547,7 @@ a {
 		align-self: start;
 		grid-column: 1;
 		grid-row: 2 / span 20;
+		justify-self: end;
 	}
 
 	#research .jwst-subsection > .subsection-note,
@@ -2567,8 +2570,8 @@ a {
 
 	#research .hr8799-subsection {
 		align-items: start;
-		column-gap: 2.5rem;
-		grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+		column-gap: var(--research-column-gap);
+		grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
 		grid-template-areas:
 			'title title'
 			'abundance copy'
@@ -2596,7 +2599,7 @@ a {
 	#research .feature-gaia .gaia-subsection {
 		display: grid;
 		grid-template-columns: minmax(19rem, 0.75fr) minmax(31rem, 1.25fr);
-		column-gap: clamp(2.5rem, 4.2vw, 4.8rem);
+		column-gap: var(--research-column-gap);
 	}
 
 	#research .feature-gaia .gaia-subsection > h5 {
@@ -2606,6 +2609,7 @@ a {
 	#research .feature-gaia .gaia-subsection > .gaia-subsection-figure {
 		grid-column: 1;
 		grid-row: 2 / span 10;
+		justify-self: end;
 	}
 
 	#research .feature-gaia .gaia-subsection > p,
