@@ -2483,6 +2483,18 @@ a {
 	padding-top: 0.3rem;
 }
 
+#research .feature-hot-jupiter .tides-result-figure {
+	margin: 1.3rem auto 1.4rem;
+	max-width: 38.9rem;
+	width: 100%;
+}
+
+#research .feature-hot-jupiter .tides-result-figure img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
 #research .feature-grid .feature.feature-kpic .kpic-title {
 	align-items: center;
 	display: flex;
@@ -2641,7 +2653,32 @@ a {
 	}
 
 	#research .feature-hot-jupiter .content {
-		max-width: 92ch;
+		column-gap: var(--research-column-gap);
+		display: grid;
+		grid-template-columns: minmax(0, min(38.9rem, 52%)) minmax(0, 1fr);
+		max-width: none;
+	}
+
+	#research .feature-hot-jupiter .content > header,
+	#research .feature-hot-jupiter .content > .key-results {
+		grid-column: 1 / -1;
+	}
+
+	#research .feature-hot-jupiter .content > .tides-result-figure {
+		align-self: start;
+		grid-column: 1;
+		grid-row: 3 / span 10;
+		justify-self: stretch;
+		margin: 0;
+	}
+
+	#research .feature-hot-jupiter .content > p,
+	#research .feature-hot-jupiter .content > .actions {
+		grid-column: 2;
+	}
+
+	#research .feature-hot-jupiter .content > p {
+		margin-top: 0;
 	}
 }
 
